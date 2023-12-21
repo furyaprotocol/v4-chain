@@ -272,8 +272,8 @@ format:
 ###############################################################################
 
 # Note: update github action workflow `proto.yaml` when updating version or images.
-protoVer=0.11.5
-protoImageName=ghcr.io/cosmos/proto-builder:$(protoVer)
+protoVer=v0.7
+protoImageName=tendermintdev/sdk-proto-gen:$(protoVer)
 protoImage=$(DOCKER) run --user root --rm -v $(CURDIR)/..:/workspace --workdir /workspace $(protoImageName)
 
 proto-swagger-gen:

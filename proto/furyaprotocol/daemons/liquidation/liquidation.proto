@@ -23,12 +23,12 @@ message LiquidateSubaccountsRequest {
   uint32 block_height = 1;
 
   // The list of liquidatable subaccount ids.
-  repeated furyaprotocol.subaccounts.SubaccountId liquidatable_subaccount_ids = 2
-      [ (gogoproto.nullable) = false ];
+  repeated furyaprotocol.subaccounts.SubaccountId liquidatable_subaccount_ids =
+      2 [ (gogoproto.nullable) = false ];
 
   // The list of subaccount ids with negative total net collateral.
-  repeated furyaprotocol.subaccounts.SubaccountId negative_tnc_subaccount_ids = 3
-      [ (gogoproto.nullable) = false ];
+  repeated furyaprotocol.subaccounts.SubaccountId negative_tnc_subaccount_ids =
+      3 [ (gogoproto.nullable) = false ];
 
   // A map of perpetual id to subaccount open position info.
   repeated furyaprotocol.clob.SubaccountOpenPositionInfo

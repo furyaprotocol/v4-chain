@@ -180,11 +180,11 @@ dasel put string -f "$CONFIG_FOLDER"/config.toml '.consensus.timeout_commit' '60
 
 ## CometBFT fork
 
-Our current implementation contains a light fork of CometBFT. The fork can be found [here](https://github.com/furyaprotocol/cometbft). Instructions to update the fork are included there.
+Our current implementation contains a light fork of CometBFT. The fork can be found [here](https://github.com/dydxprotocol/cometbft). Instructions to update the fork are included there.
 
 ## CosmosSDK fork
 
-Our current implementation contains a light fork of CosmosSDK. The fork can be found [here](https://github.com/furyaprotocol/cosmos-sdk). Instructions to update the fork are included there.
+Our current implementation contains a light fork of CosmosSDK. The fork can be found [here](https://github.com/dydxprotocol/cosmos-sdk). Instructions to update the fork are included there.
 
 ## Daemons
 
