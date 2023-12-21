@@ -1,0 +1,13 @@
+syntax = "proto3";
+package furyaprotocol.feetiers;
+
+import "gogoproto/gogo.proto";
+import "furyaprotocol/feetiers/params.proto";
+
+option go_package = "github.com/furyanprotocol/v4-chain/protocol/x/feetiers/types";
+
+// GenesisState defines the feetiers module's genesis state.
+message GenesisState {
+  // The parameters for perpetual fees.
+  PerpetualFeeParams params = 1 [ (gogoproto.nullable) = false ];
+}
