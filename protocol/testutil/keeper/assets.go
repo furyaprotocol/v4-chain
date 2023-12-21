@@ -3,10 +3,10 @@ package keeper
 import (
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/common"
-	indexerevents "github.com/dydxprotocol/v4-chain/protocol/indexer/events"
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/indexer_manager"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/common"
+	indexerevents "github.com/furyanprotocol/v4-chain/protocol/indexer/events"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/indexer_manager"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
 
 	tmdb "github.com/cometbft/cometbft-db"
 	"github.com/cosmos/cosmos-sdk/codec"
@@ -15,10 +15,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	"github.com/dydxprotocol/v4-chain/protocol/x/assets/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/assets/types"
-	priceskeeper "github.com/dydxprotocol/v4-chain/protocol/x/prices/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/x/assets/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/assets/types"
+	priceskeeper "github.com/furyanprotocol/v4-chain/protocol/x/prices/keeper"
 )
 
 // CreateUsdcAsset creates USDC in the assets module for tests.

@@ -1,12 +1,12 @@
 package constants
 
 import (
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/daemons/pricefeed/exchange_config"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/daemons/pricefeed/exchange_config"
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/types"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/daemons/pricefeed"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/json"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/types"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/daemons/pricefeed"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/json"
 	"github.com/stretchr/testify/require"
 )
 
@@ -155,9 +155,9 @@ func TestGenerateExchangeConfigJson(t *testing.T) {
 			id:                             exchange_config.MARKET_USDT_USD,
 			expectedExchangeConfigJsonFile: "usdt_exchange_config.json",
 		},
-		"DYDX exchange config": {
-			id:                             exchange_config.MARKET_DYDX_USD,
-			expectedExchangeConfigJsonFile: "dydx_exchange_config.json",
+		"FURYA exchange config": {
+			id:                             exchange_config.MARKET_FURYA_USD,
+			expectedExchangeConfigJsonFile: "furya_exchange_config.json",
 		},
 	}
 	for name, tc := range tests {

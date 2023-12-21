@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
-	"github.com/dydxprotocol/v4-chain/protocol/x/epochs/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/epochs/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

@@ -1,5 +1,5 @@
-import { SubaccountTable } from '@dydxprotocol-indexer/postgres';
-import { IndexerSubaccountId } from '@dydxprotocol-indexer/v4-protos';
+import { SubaccountTable } from '@furyaprotocol-indexer/postgres';
+import { IndexerSubaccountId } from '@furyaprotocol-indexer/v4-protos';
 import _ from 'lodash';
 import { RedisClient } from 'redis';
 

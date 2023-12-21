@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/daemons/pricefeed/exchange_config"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/daemons/pricefeed/exchange_config"
 
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/constants/exchange_common"
-	pricefeedmetrics "github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/metrics"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/constants/exchange_common"
+	pricefeedmetrics "github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
 	"github.com/stretchr/testify/require"
 )
 

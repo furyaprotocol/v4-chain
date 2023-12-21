@@ -1,7 +1,7 @@
-import { logger } from '@dydxprotocol-indexer/base';
-import { AssetCreateEventV1, IndexerTendermintBlock, IndexerTendermintEvent } from '@dydxprotocol-indexer/v4-protos';
-import { dbHelpers, testMocks } from '@dydxprotocol-indexer/postgres';
-import { DydxIndexerSubtypes } from '../../src/lib/types';
+import { logger } from '@furyaprotocol-indexer/base';
+import { AssetCreateEventV1, IndexerTendermintBlock, IndexerTendermintEvent } from '@furyaprotocol-indexer/v4-protos';
+import { dbHelpers, testMocks } from '@furyaprotocol-indexer/postgres';
+import { FuryaIndexerSubtypes } from '../../src/lib/types';
 import {
   defaultAssetCreateEvent, defaultHeight, defaultTime, defaultTxHash,
 } from '../helpers/constants';
@@ -41,7 +41,7 @@ function createBlock(
   assetCreateEvent: AssetCreateEventV1,
 ): IndexerTendermintBlock {
   const event: IndexerTendermintEvent = createIndexerTendermintEvent(
-    DydxIndexerSubtypes.ASSET,
+    FuryaIndexerSubtypes.ASSET,
     AssetCreateEventV1.encode(assetCreateEvent).finish(),
     0,
     0,

@@ -6,9 +6,9 @@ import (
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cometbft/cometbft/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
-	testapp "github.com/dydxprotocol/v4-chain/protocol/testutil/app"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	perptypes "github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/types"
+	testapp "github.com/furyanprotocol/v4-chain/protocol/testutil/app"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	perptypes "github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -28,7 +28,7 @@ func TestAllLiquidityTiers(
 
 	request := perptypes.QueryAllLiquidityTiersRequest{}
 	abciResponse := tApp.App.Query(abci.RequestQuery{
-		Path: "/dydxprotocol.perpetuals.Query/AllLiquidityTiers",
+		Path: "/furyaprotocol.perpetuals.Query/AllLiquidityTiers",
 		Data: tApp.App.AppCodec().MustMarshal(&request),
 	})
 	require.True(t, abciResponse.IsOK())

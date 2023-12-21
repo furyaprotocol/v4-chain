@@ -4,16 +4,16 @@ import {
   ParseMessageError,
   wrapBackgroundTask,
   STATS_NO_SAMPLING,
-} from '@dydxprotocol-indexer/base';
-import { KafkaTopics } from '@dydxprotocol-indexer/kafka';
+} from '@furyaprotocol-indexer/base';
+import { KafkaTopics } from '@furyaprotocol-indexer/kafka';
 import {
   Transaction,
   IsolationLevel,
   CandleFromDatabase,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import {
   IndexerTendermintBlock,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import {
   KafkaMessage,
 } from 'kafkajs';

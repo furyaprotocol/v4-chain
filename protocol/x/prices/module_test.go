@@ -8,7 +8,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
 
 	errorsmod "cosmossdk.io/errors"
 
@@ -18,12 +18,12 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/tx"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/daemons/pricefeed"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/prices"
-	prices_keeper "github.com/dydxprotocol/v4-chain/protocol/x/prices/keeper"
-	pricestypes "github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/daemons/pricefeed"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/prices"
+	prices_keeper "github.com/furyanprotocol/v4-chain/protocol/x/prices/keeper"
+	pricestypes "github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/stretchr/testify/mock"
@@ -210,21 +210,21 @@ func TestAppModuleBasic_RegisterGRPCGatewayRoutes(t *testing.T) {
 
 	// Expect AllMarkets route registered
 	recorder := httptest.NewRecorder()
-	req, err := http.NewRequest("GET", "/dydxprotocol/prices/market", nil)
+	req, err := http.NewRequest("GET", "/furyaprotocol/prices/market", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")
 
 	// Expect Markets route registered
 	recorder = httptest.NewRecorder()
-	req, err = http.NewRequest("GET", "/dydxprotocol/prices/market/0", nil)
+	req, err = http.NewRequest("GET", "/furyaprotocol/prices/market/0", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")
 
 	// Expect unexpected route not registered
 	recorder = httptest.NewRecorder()
-	req, err = http.NewRequest("GET", "/dydxprotocol/prices/foo/bar/baz", nil)
+	req, err = http.NewRequest("GET", "/furyaprotocol/prices/foo/bar/baz", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Equal(t, 404, recorder.Code)

@@ -1,12 +1,12 @@
 import {
   stats,
-} from '@dydxprotocol-indexer/base';
+} from '@furyaprotocol-indexer/base';
 import {
   OrderSide,
   PerpetualMarketFromDatabase,
   PerpetualMarketTable,
-} from '@dydxprotocol-indexer/postgres';
-import { OrderbookLevels, OrderbookLevelsCache, PriceLevel } from '@dydxprotocol-indexer/redis';
+} from '@furyaprotocol-indexer/postgres';
+import { OrderbookLevels, OrderbookLevelsCache, PriceLevel } from '@furyaprotocol-indexer/redis';
 import _ from 'lodash';
 
 import config from '../config';

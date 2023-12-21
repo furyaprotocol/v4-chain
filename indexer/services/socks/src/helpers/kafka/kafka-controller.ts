@@ -1,9 +1,9 @@
-import { logger } from '@dydxprotocol-indexer/base';
+import { logger } from '@furyaprotocol-indexer/base';
 import {
   WebsocketTopics,
   consumer,
   stopConsumer,
-} from '@dydxprotocol-indexer/kafka';
+} from '@furyaprotocol-indexer/kafka';
 
 export async function connect(): Promise<void> {
   await consumer.connect();

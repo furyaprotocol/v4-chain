@@ -3,7 +3,7 @@ package types
 import (
 	"github.com/cometbft/cometbft/libs/log"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
 )
 
 type DelayMsgKeeper interface {

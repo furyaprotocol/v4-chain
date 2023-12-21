@@ -1,5 +1,5 @@
-import { OrderTable } from '@dydxprotocol-indexer/postgres';
-import { IndexerOrderId, RedisOrder } from '@dydxprotocol-indexer/v4-protos';
+import { OrderTable } from '@furyaprotocol-indexer/postgres';
+import { IndexerOrderId, RedisOrder } from '@furyaprotocol-indexer/v4-protos';
 import { Callback, RedisClient } from 'redis';
 
 import { RemoveOrderResult } from '../types';

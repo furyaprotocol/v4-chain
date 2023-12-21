@@ -1,7 +1,7 @@
 package msgs
 
 import (
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
 )
 
 var (
@@ -134,90 +134,90 @@ var (
 		"/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal":       {},
 
 		// blocktime
-		"/dydxprotocol.blocktime.MsgUpdateDowntimeParams":         {},
-		"/dydxprotocol.blocktime.MsgUpdateDowntimeParamsResponse": {},
+		"/furyaprotocol.blocktime.MsgUpdateDowntimeParams":         {},
+		"/furyaprotocol.blocktime.MsgUpdateDowntimeParamsResponse": {},
 
 		// bridge
-		"/dydxprotocol.bridge.MsgAcknowledgeBridges":          {},
-		"/dydxprotocol.bridge.MsgAcknowledgeBridgesResponse":  {},
-		"/dydxprotocol.bridge.MsgCompleteBridge":              {},
-		"/dydxprotocol.bridge.MsgCompleteBridgeResponse":      {},
-		"/dydxprotocol.bridge.MsgUpdateEventParams":           {},
-		"/dydxprotocol.bridge.MsgUpdateEventParamsResponse":   {},
-		"/dydxprotocol.bridge.MsgUpdateProposeParams":         {},
-		"/dydxprotocol.bridge.MsgUpdateProposeParamsResponse": {},
-		"/dydxprotocol.bridge.MsgUpdateSafetyParams":          {},
-		"/dydxprotocol.bridge.MsgUpdateSafetyParamsResponse":  {},
+		"/furyaprotocol.bridge.MsgAcknowledgeBridges":          {},
+		"/furyaprotocol.bridge.MsgAcknowledgeBridgesResponse":  {},
+		"/furyaprotocol.bridge.MsgCompleteBridge":              {},
+		"/furyaprotocol.bridge.MsgCompleteBridgeResponse":      {},
+		"/furyaprotocol.bridge.MsgUpdateEventParams":           {},
+		"/furyaprotocol.bridge.MsgUpdateEventParamsResponse":   {},
+		"/furyaprotocol.bridge.MsgUpdateProposeParams":         {},
+		"/furyaprotocol.bridge.MsgUpdateProposeParamsResponse": {},
+		"/furyaprotocol.bridge.MsgUpdateSafetyParams":          {},
+		"/furyaprotocol.bridge.MsgUpdateSafetyParamsResponse":  {},
 
 		// clob
-		"/dydxprotocol.clob.MsgCancelOrder":                                {},
-		"/dydxprotocol.clob.MsgCancelOrderResponse":                        {},
-		"/dydxprotocol.clob.MsgCreateClobPair":                             {},
-		"/dydxprotocol.clob.MsgCreateClobPairResponse":                     {},
-		"/dydxprotocol.clob.MsgPlaceOrder":                                 {},
-		"/dydxprotocol.clob.MsgPlaceOrderResponse":                         {},
-		"/dydxprotocol.clob.MsgProposedOperations":                         {},
-		"/dydxprotocol.clob.MsgProposedOperationsResponse":                 {},
-		"/dydxprotocol.clob.MsgUpdateBlockRateLimitConfiguration":          {},
-		"/dydxprotocol.clob.MsgUpdateBlockRateLimitConfigurationResponse":  {},
-		"/dydxprotocol.clob.MsgUpdateClobPair":                             {},
-		"/dydxprotocol.clob.MsgUpdateClobPairResponse":                     {},
-		"/dydxprotocol.clob.MsgUpdateEquityTierLimitConfiguration":         {},
-		"/dydxprotocol.clob.MsgUpdateEquityTierLimitConfigurationResponse": {},
-		"/dydxprotocol.clob.MsgUpdateLiquidationsConfig":                   {},
-		"/dydxprotocol.clob.MsgUpdateLiquidationsConfigResponse":           {},
+		"/furyaprotocol.clob.MsgCancelOrder":                                {},
+		"/furyaprotocol.clob.MsgCancelOrderResponse":                        {},
+		"/furyaprotocol.clob.MsgCreateClobPair":                             {},
+		"/furyaprotocol.clob.MsgCreateClobPairResponse":                     {},
+		"/furyaprotocol.clob.MsgPlaceOrder":                                 {},
+		"/furyaprotocol.clob.MsgPlaceOrderResponse":                         {},
+		"/furyaprotocol.clob.MsgProposedOperations":                         {},
+		"/furyaprotocol.clob.MsgProposedOperationsResponse":                 {},
+		"/furyaprotocol.clob.MsgUpdateBlockRateLimitConfiguration":          {},
+		"/furyaprotocol.clob.MsgUpdateBlockRateLimitConfigurationResponse":  {},
+		"/furyaprotocol.clob.MsgUpdateClobPair":                             {},
+		"/furyaprotocol.clob.MsgUpdateClobPairResponse":                     {},
+		"/furyaprotocol.clob.MsgUpdateEquityTierLimitConfiguration":         {},
+		"/furyaprotocol.clob.MsgUpdateEquityTierLimitConfigurationResponse": {},
+		"/furyaprotocol.clob.MsgUpdateLiquidationsConfig":                   {},
+		"/furyaprotocol.clob.MsgUpdateLiquidationsConfigResponse":           {},
 
 		// delaymsg
-		"/dydxprotocol.delaymsg.MsgDelayMessage":         {},
-		"/dydxprotocol.delaymsg.MsgDelayMessageResponse": {},
+		"/furyaprotocol.delaymsg.MsgDelayMessage":         {},
+		"/furyaprotocol.delaymsg.MsgDelayMessageResponse": {},
 
 		// feetiers
-		"/dydxprotocol.feetiers.MsgUpdatePerpetualFeeParams":         {},
-		"/dydxprotocol.feetiers.MsgUpdatePerpetualFeeParamsResponse": {},
+		"/furyaprotocol.feetiers.MsgUpdatePerpetualFeeParams":         {},
+		"/furyaprotocol.feetiers.MsgUpdatePerpetualFeeParamsResponse": {},
 
 		// perpetuals
-		"/dydxprotocol.perpetuals.MsgAddPremiumVotes":               {},
-		"/dydxprotocol.perpetuals.MsgAddPremiumVotesResponse":       {},
-		"/dydxprotocol.perpetuals.MsgCreatePerpetual":               {},
-		"/dydxprotocol.perpetuals.MsgCreatePerpetualResponse":       {},
-		"/dydxprotocol.perpetuals.MsgSetLiquidityTier":              {},
-		"/dydxprotocol.perpetuals.MsgSetLiquidityTierResponse":      {},
-		"/dydxprotocol.perpetuals.MsgUpdateParams":                  {},
-		"/dydxprotocol.perpetuals.MsgUpdateParamsResponse":          {},
-		"/dydxprotocol.perpetuals.MsgUpdatePerpetualParams":         {},
-		"/dydxprotocol.perpetuals.MsgUpdatePerpetualParamsResponse": {},
+		"/furyaprotocol.perpetuals.MsgAddPremiumVotes":               {},
+		"/furyaprotocol.perpetuals.MsgAddPremiumVotesResponse":       {},
+		"/furyaprotocol.perpetuals.MsgCreatePerpetual":               {},
+		"/furyaprotocol.perpetuals.MsgCreatePerpetualResponse":       {},
+		"/furyaprotocol.perpetuals.MsgSetLiquidityTier":              {},
+		"/furyaprotocol.perpetuals.MsgSetLiquidityTierResponse":      {},
+		"/furyaprotocol.perpetuals.MsgUpdateParams":                  {},
+		"/furyaprotocol.perpetuals.MsgUpdateParamsResponse":          {},
+		"/furyaprotocol.perpetuals.MsgUpdatePerpetualParams":         {},
+		"/furyaprotocol.perpetuals.MsgUpdatePerpetualParamsResponse": {},
 
 		// prices
-		"/dydxprotocol.prices.MsgCreateOracleMarket":         {},
-		"/dydxprotocol.prices.MsgCreateOracleMarketResponse": {},
-		"/dydxprotocol.prices.MsgUpdateMarketPrices":         {},
-		"/dydxprotocol.prices.MsgUpdateMarketPricesResponse": {},
-		"/dydxprotocol.prices.MsgUpdateMarketParam":          {},
-		"/dydxprotocol.prices.MsgUpdateMarketParamResponse":  {},
+		"/furyaprotocol.prices.MsgCreateOracleMarket":         {},
+		"/furyaprotocol.prices.MsgCreateOracleMarketResponse": {},
+		"/furyaprotocol.prices.MsgUpdateMarketPrices":         {},
+		"/furyaprotocol.prices.MsgUpdateMarketPricesResponse": {},
+		"/furyaprotocol.prices.MsgUpdateMarketParam":          {},
+		"/furyaprotocol.prices.MsgUpdateMarketParamResponse":  {},
 
 		// sending
-		"/dydxprotocol.sending.MsgCreateTransfer":                  {},
-		"/dydxprotocol.sending.MsgCreateTransferResponse":          {},
-		"/dydxprotocol.sending.MsgDepositToSubaccount":             {},
-		"/dydxprotocol.sending.MsgDepositToSubaccountResponse":     {},
-		"/dydxprotocol.sending.MsgWithdrawFromSubaccount":          {},
-		"/dydxprotocol.sending.MsgWithdrawFromSubaccountResponse":  {},
-		"/dydxprotocol.sending.MsgSendFromModuleToAccount":         {},
-		"/dydxprotocol.sending.MsgSendFromModuleToAccountResponse": {},
+		"/furyaprotocol.sending.MsgCreateTransfer":                  {},
+		"/furyaprotocol.sending.MsgCreateTransferResponse":          {},
+		"/furyaprotocol.sending.MsgDepositToSubaccount":             {},
+		"/furyaprotocol.sending.MsgDepositToSubaccountResponse":     {},
+		"/furyaprotocol.sending.MsgWithdrawFromSubaccount":          {},
+		"/furyaprotocol.sending.MsgWithdrawFromSubaccountResponse":  {},
+		"/furyaprotocol.sending.MsgSendFromModuleToAccount":         {},
+		"/furyaprotocol.sending.MsgSendFromModuleToAccountResponse": {},
 
 		// stats
-		"/dydxprotocol.stats.MsgUpdateParams":         {},
-		"/dydxprotocol.stats.MsgUpdateParamsResponse": {},
+		"/furyaprotocol.stats.MsgUpdateParams":         {},
+		"/furyaprotocol.stats.MsgUpdateParamsResponse": {},
 
 		// vest
-		"/dydxprotocol.vest.MsgSetVestEntry":            {},
-		"/dydxprotocol.vest.MsgSetVestEntryResponse":    {},
-		"/dydxprotocol.vest.MsgDeleteVestEntry":         {},
-		"/dydxprotocol.vest.MsgDeleteVestEntryResponse": {},
+		"/furyaprotocol.vest.MsgSetVestEntry":            {},
+		"/furyaprotocol.vest.MsgSetVestEntryResponse":    {},
+		"/furyaprotocol.vest.MsgDeleteVestEntry":         {},
+		"/furyaprotocol.vest.MsgDeleteVestEntryResponse": {},
 
 		// rewards
-		"/dydxprotocol.rewards.MsgUpdateParams":         {},
-		"/dydxprotocol.rewards.MsgUpdateParamsResponse": {},
+		"/furyaprotocol.rewards.MsgUpdateParams":         {},
+		"/furyaprotocol.rewards.MsgUpdateParamsResponse": {},
 
 		// ibc.applications
 		"/ibc.applications.transfer.v1.MsgTransfer":           {},

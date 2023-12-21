@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon';
-import { dbHelpers, Transaction } from '@dydxprotocol-indexer/postgres';
+import { dbHelpers, Transaction } from '@furyaprotocol-indexer/postgres';
 import {
   AssetCreateEventV1,
   IndexerTendermintBlock,
@@ -7,10 +7,10 @@ import {
   MarketEventV1,
   SubaccountUpdateEventV1,
   Timestamp,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import { createIndexerTendermintBlock, createIndexerTendermintEvent } from '../helpers/indexer-proto-helpers';
 import { MILLIS_IN_NANOS, SECONDS_IN_MILLIS } from '../../src/constants';
-import { DydxIndexerSubtypes } from '../../src/lib/types';
+import { FuryaIndexerSubtypes } from '../../src/lib/types';
 import {
   defaultAssetCreateEvent,
   defaultHeight,
@@ -87,19 +87,19 @@ describe('block-processor', () => {
 
   const events: IndexerTendermintEvent[] = [
     createIndexerTendermintEvent(
-      DydxIndexerSubtypes.SUBACCOUNT_UPDATE,
+      FuryaIndexerSubtypes.SUBACCOUNT_UPDATE,
       defaultSubaccountUpdateEventBinary,
       transactionIndex0,
       eventIndex0,
     ),
     createIndexerTendermintEvent(
-      DydxIndexerSubtypes.MARKET,
+      FuryaIndexerSubtypes.MARKET,
       defaultMarketEventBinary,
       transactionIndex1,
       eventIndex0,
     ),
     createIndexerTendermintEvent(
-      DydxIndexerSubtypes.ASSET,
+      FuryaIndexerSubtypes.ASSET,
       defaultAssetEventBinary,
       transactionIndex0,
       eventIndex1,

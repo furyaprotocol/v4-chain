@@ -8,12 +8,12 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	indexerevents "github.com/dydxprotocol/v4-chain/protocol/indexer/events"
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/indexer_manager"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	errorlib "github.com/dydxprotocol/v4-chain/protocol/lib/error"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
+	indexerevents "github.com/furyanprotocol/v4-chain/protocol/indexer/events"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/indexer_manager"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	errorlib "github.com/furyanprotocol/v4-chain/protocol/lib/error"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
 )
 
 // PlaceOrder is the entry point for stateful `MsgPlaceOrder` messages executed in `runMsgs` during `DeliverTx`.

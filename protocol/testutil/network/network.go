@@ -21,10 +21,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/dydxprotocol/v4-chain/protocol/app"
-	"github.com/dydxprotocol/v4-chain/protocol/app/basic_manager"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/appoptions"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/ci"
+	"github.com/furyanprotocol/v4-chain/protocol/app"
+	"github.com/furyanprotocol/v4-chain/protocol/app/basic_manager"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/appoptions"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/ci"
 	"github.com/gofrs/flock"
 	"github.com/stretchr/testify/require"
 )
@@ -153,12 +153,12 @@ func DefaultConfig(options *NetworkConfigOptions) network.Config {
 				appOptions,
 				baseapp.SetPruning(pruningtypes.NewPruningOptionsFromString(val.GetAppConfig().Pruning)),
 				baseapp.SetMinGasPrices(val.GetAppConfig().MinGasPrices),
-				baseapp.SetChainID("dydxprotocol"),
+				baseapp.SetChainID("furyaprotocol"),
 			)
 		},
 		GenesisState:    basic_manager.ModuleBasics.DefaultGenesis(encoding.Codec),
 		TimeoutCommit:   2 * time.Second,
-		ChainID:         "dydxprotocol",
+		ChainID:         "furyaprotocol",
 		NumValidators:   1,
 		BondDenom:       sdk.DefaultBondDenom,
 		MinGasPrices:    fmt.Sprintf("0.000006%s", sdk.DefaultBondDenom),
@@ -175,7 +175,7 @@ func DefaultConfig(options *NetworkConfigOptions) network.Config {
 // NewTestNetworkFixture returns a new simapp AppConstructor for network simulation tests
 func NewTestNetworkFixture() network.TestFixture {
 	appOptions := appoptions.GetDefaultTestAppOptionsFromTempDirectory("", nil)
-	dydxApp := app.New(
+	furyaApp := app.New(
 		log.NewNopLogger(),
 		tmdb.NewMemDB(),
 		tmdb.NewMemDB(),
@@ -199,12 +199,12 @@ func NewTestNetworkFixture() network.TestFixture {
 
 	return network.TestFixture{
 		AppConstructor: appCtr,
-		GenesisState:   dydxApp.DefaultGenesis(),
+		GenesisState:   furyaApp.DefaultGenesis(),
 		EncodingConfig: testutil.TestEncodingConfig{
-			InterfaceRegistry: dydxApp.InterfaceRegistry(),
-			Codec:             dydxApp.AppCodec(),
-			TxConfig:          dydxApp.TxConfig(),
-			Amino:             dydxApp.LegacyAmino(),
+			InterfaceRegistry: furyaApp.InterfaceRegistry(),
+			Codec:             furyaApp.AppCodec(),
+			TxConfig:          furyaApp.TxConfig(),
+			Amino:             furyaApp.LegacyAmino(),
 		},
 	}
 }

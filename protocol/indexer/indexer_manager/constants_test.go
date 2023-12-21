@@ -3,12 +3,12 @@ package indexer_manager_test
 import (
 	"time"
 
-	"github.com/dydxprotocol/v4-chain/protocol/dtypes"
-	indexerevents "github.com/dydxprotocol/v4-chain/protocol/indexer/events"
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/indexer_manager"
-	v1 "github.com/dydxprotocol/v4-chain/protocol/indexer/protocol/v1"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	"github.com/furyanprotocol/v4-chain/protocol/dtypes"
+	indexerevents "github.com/furyanprotocol/v4-chain/protocol/indexer/events"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/indexer_manager"
+	v1 "github.com/furyanprotocol/v4-chain/protocol/indexer/protocol/v1"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 )
 
 const (

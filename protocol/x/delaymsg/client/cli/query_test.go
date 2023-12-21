@@ -9,12 +9,12 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/encoding"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/network"
-	bridgetypes "github.com/dydxprotocol/v4-chain/protocol/x/bridge/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/delaymsg/client/cli"
-	"github.com/dydxprotocol/v4-chain/protocol/x/delaymsg/types"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/encoding"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/network"
+	bridgetypes "github.com/furyanprotocol/v4-chain/protocol/x/bridge/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/delaymsg/client/cli"
+	"github.com/furyanprotocol/v4-chain/protocol/x/delaymsg/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -2,8 +2,8 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
 )
 
 // GetProcessProposerMatchesEvents gets the process proposer matches events from the latest block.

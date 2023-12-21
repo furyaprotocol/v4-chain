@@ -1,5 +1,5 @@
-import { logger, runFuncWithTimingStat, stats } from '@dydxprotocol-indexer/base';
-import { KafkaTopics, SUBACCOUNTS_WEBSOCKET_MESSAGE_VERSION } from '@dydxprotocol-indexer/kafka';
+import { logger, runFuncWithTimingStat, stats } from '@furyaprotocol-indexer/base';
+import { KafkaTopics, SUBACCOUNTS_WEBSOCKET_MESSAGE_VERSION } from '@furyaprotocol-indexer/kafka';
 import {
   BlockTable,
   BlockFromDatabase,
@@ -14,7 +14,7 @@ import {
   apiTranslations,
   TimeInForce,
   IsoString,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import {
   OpenOrdersCache,
   OrderbookLevelsCache,
@@ -22,8 +22,8 @@ import {
   RemoveOrderResult,
   removeOrder,
   CanceledOrdersCache,
-} from '@dydxprotocol-indexer/redis';
-import { ORDER_FLAG_SHORT_TERM, isStatefulOrder } from '@dydxprotocol-indexer/v4-proto-parser';
+} from '@furyaprotocol-indexer/redis';
+import { ORDER_FLAG_SHORT_TERM, isStatefulOrder } from '@furyaprotocol-indexer/v4-proto-parser';
 import {
   OffChainUpdateV1,
   IndexerOrder,
@@ -32,7 +32,7 @@ import {
   OrderRemoveV1_OrderRemovalStatus,
   RedisOrder,
   SubaccountMessage,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import { Big } from 'big.js';
 import { Message } from 'kafkajs';
 

@@ -1,6 +1,6 @@
-import { logger, startBugsnag, wrapBackgroundTask } from '@dydxprotocol-indexer/base';
-import { startConsumer } from '@dydxprotocol-indexer/kafka';
-import { perpetualMarketRefresher } from '@dydxprotocol-indexer/postgres';
+import { logger, startBugsnag, wrapBackgroundTask } from '@furyaprotocol-indexer/base';
+import { startConsumer } from '@furyaprotocol-indexer/kafka';
+import { perpetualMarketRefresher } from '@furyaprotocol-indexer/postgres';
 
 import config from './config';
 import {

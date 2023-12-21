@@ -1,4 +1,4 @@
-import { redis as redislib } from '@dydxprotocol-indexer/redis';
+import { redis as redislib } from '@furyaprotocol-indexer/redis';
 import {
   RedisClient,
 } from 'redis';

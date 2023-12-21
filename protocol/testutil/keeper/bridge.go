@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	delaymsgtypes "github.com/dydxprotocol/v4-chain/protocol/x/delaymsg/types"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	delaymsgtypes "github.com/furyanprotocol/v4-chain/protocol/x/delaymsg/types"
 	"testing"
 
 	tmdb "github.com/cometbft/cometbft-db"
@@ -11,10 +11,10 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
-	bridgeserver_types "github.com/dydxprotocol/v4-chain/protocol/daemons/server/types/bridge"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
-	"github.com/dydxprotocol/v4-chain/protocol/x/bridge/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/bridge/types"
+	bridgeserver_types "github.com/furyanprotocol/v4-chain/protocol/daemons/server/types/bridge"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
+	"github.com/furyanprotocol/v4-chain/protocol/x/bridge/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/bridge/types"
 )
 
 func BridgeKeepers(

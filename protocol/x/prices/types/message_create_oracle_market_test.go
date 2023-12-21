@@ -1,12 +1,12 @@
 package types_test
 
 import (
-	"github.com/dydxprotocol/v4-chain/protocol/x/prices/client/testutil"
+	"github.com/furyanprotocol/v4-chain/protocol/x/prices/client/testutil"
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	types "github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	types "github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
 	"github.com/stretchr/testify/require"
 )
 

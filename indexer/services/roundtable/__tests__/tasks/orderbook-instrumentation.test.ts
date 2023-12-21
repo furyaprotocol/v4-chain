@@ -1,16 +1,16 @@
-import { stats } from '@dydxprotocol-indexer/base';
+import { stats } from '@furyaprotocol-indexer/base';
 import {
   dbHelpers,
   OrderSide,
   PerpetualMarketFromDatabase,
   PerpetualMarketTable,
   testMocks,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import {
   OpenOrdersCache,
   OrderbookLevelsCache,
   redis,
-} from '@dydxprotocol-indexer/redis';
+} from '@furyaprotocol-indexer/redis';
 import
 orderbookInstrumentationTask,
 { priceToSubticks }

@@ -4,8 +4,8 @@ package cli_test
 
 import (
 	"fmt"
-	appflags "github.com/dydxprotocol/v4-chain/protocol/app/flags"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/configs"
+	appflags "github.com/furyanprotocol/v4-chain/protocol/app/flags"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/configs"
 	"path/filepath"
 	"time"
 
@@ -13,16 +13,16 @@ import (
 
 	networktestutil "github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/app"
-	daemonflags "github.com/dydxprotocol/v4-chain/protocol/daemons/flags"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/appoptions"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/network"
-	epochstypes "github.com/dydxprotocol/v4-chain/protocol/x/epochs/types"
-	feetierstypes "github.com/dydxprotocol/v4-chain/protocol/x/feetiers/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/prices/client/testutil"
-	"github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
+	"github.com/furyanprotocol/v4-chain/protocol/app"
+	daemonflags "github.com/furyanprotocol/v4-chain/protocol/daemons/flags"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/appoptions"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/network"
+	epochstypes "github.com/furyanprotocol/v4-chain/protocol/x/epochs/types"
+	feetierstypes "github.com/furyanprotocol/v4-chain/protocol/x/feetiers/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/prices/client/testutil"
+	"github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
 	"github.com/h2non/gock"
 	"github.com/stretchr/testify/suite"
 )

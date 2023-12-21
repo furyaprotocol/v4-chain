@@ -9,8 +9,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/gogoproto/proto"
 
-	"github.com/dydxprotocol/v4-chain/protocol/lib/ante"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/ante"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
 )
 
 // GetGroupMsgOther returns two separate slices of byte txs given a single slice of byte txs and max bytes.

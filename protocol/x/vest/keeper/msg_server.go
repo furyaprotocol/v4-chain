@@ -4,7 +4,7 @@ import (
 	"context"
 	errorsmod "cosmossdk.io/errors"
 
-	"github.com/dydxprotocol/v4-chain/protocol/x/vest/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/vest/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"

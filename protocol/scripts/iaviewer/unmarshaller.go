@@ -4,8 +4,8 @@ import (
 	"reflect"
 
 	"github.com/cosmos/cosmos-sdk/codec"
-	app "github.com/dydxprotocol/v4-chain/protocol/app"
-	clob "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
+	app "github.com/furyanprotocol/v4-chain/protocol/app"
+	clob "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
 )
 
 func protoUnmarshaller[M codec.ProtoMarshaler](b []byte) string {

@@ -18,9 +18,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/dydxprotocol/v4-chain/protocol/x/assets/client/cli"
-	"github.com/dydxprotocol/v4-chain/protocol/x/assets/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/assets/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/assets/client/cli"
+	"github.com/furyanprotocol/v4-chain/protocol/x/assets/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/assets/types"
 )
 
 var (

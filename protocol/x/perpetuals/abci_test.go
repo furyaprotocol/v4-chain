@@ -5,9 +5,9 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
-	keepertest "github.com/dydxprotocol/v4-chain/protocol/testutil/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/perpetuals"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
+	keepertest "github.com/furyanprotocol/v4-chain/protocol/testutil/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/perpetuals"
 	"github.com/stretchr/testify/require"
 )
 

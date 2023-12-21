@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	testapp "github.com/dydxprotocol/v4-chain/protocol/testutil/app"
-	"github.com/dydxprotocol/v4-chain/protocol/x/blocktime/types"
+	testapp "github.com/furyanprotocol/v4-chain/protocol/testutil/app"
+	"github.com/furyanprotocol/v4-chain/protocol/x/blocktime/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -5,11 +5,11 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/dtypes"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/sample"
-	assettypes "github.com/dydxprotocol/v4-chain/protocol/x/assets/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	"github.com/furyanprotocol/v4-chain/protocol/dtypes"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/sample"
+	assettypes "github.com/furyanprotocol/v4-chain/protocol/x/assets/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -34,7 +34,7 @@ func TestSubaccountIdValidate(t *testing.T) {
 		expectedError error
 	}{
 		"validates successfully": {
-			owner:  "dydx1x2hd82qerp7lc0kf5cs3yekftupkrl620te6u2",
+			owner:  "furya1x2hd82qerp7lc0kf5cs3yekftupkrl620te6u2",
 			number: 0,
 		},
 		"validates successfully with non-zero subaccount": {

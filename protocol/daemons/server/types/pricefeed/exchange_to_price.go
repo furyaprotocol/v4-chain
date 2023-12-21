@@ -5,10 +5,10 @@ import (
 
 	gometrics "github.com/armon/go-metrics"
 	"github.com/cosmos/cosmos-sdk/telemetry"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/api"
-	pricefeedmetrics "github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/metrics"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/types"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/api"
+	pricefeedmetrics "github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/types"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
 )
 
 // ExchangeToPrice maintains multiple prices from different exchanges for

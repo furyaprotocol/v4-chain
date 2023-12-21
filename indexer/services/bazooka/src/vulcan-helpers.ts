@@ -1,10 +1,10 @@
-import { logger } from '@dydxprotocol-indexer/base';
+import { logger } from '@furyaprotocol-indexer/base';
 import {
   BatchKafkaProducer,
   KafkaTopics,
   producer,
   ProducerMessage,
-} from '@dydxprotocol-indexer/kafka';
+} from '@furyaprotocol-indexer/kafka';
 import {
   OrderFromDatabase,
   OrderTable,
@@ -12,15 +12,15 @@ import {
   PerpetualMarketFromDatabase,
   perpetualMarketRefresher,
   protocolTranslations,
-} from '@dydxprotocol-indexer/postgres';
-import { getOrderIdHash } from '@dydxprotocol-indexer/v4-proto-parser';
+} from '@furyaprotocol-indexer/postgres';
+import { getOrderIdHash } from '@furyaprotocol-indexer/v4-proto-parser';
 import {
   IndexerOrder,
   IndexerOrderId,
   OffChainUpdateV1,
   OrderPlaceV1_OrderPlacementStatus,
-} from '@dydxprotocol-indexer/v4-protos';
-import { Long } from '@dydxprotocol-indexer/v4-protos/build/codegen/helpers';
+} from '@furyaprotocol-indexer/v4-protos';
+import { Long } from '@furyaprotocol-indexer/v4-protos/build/codegen/helpers';
 import Big from 'big.js';
 import _ from 'lodash';
 

@@ -10,7 +10,7 @@ import (
 
 	"github.com/cometbft/cometbft/libs/log"
 	"github.com/cosmos/cosmos-sdk/version"
-	"github.com/dydxprotocol/v4-chain/protocol/app/flags"
+	"github.com/furyanprotocol/v4-chain/protocol/app/flags"
 	errorspkg "github.com/pkg/errors"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/pkgerrors"

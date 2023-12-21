@@ -9,12 +9,12 @@ import (
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
-	testutil_rand "github.com/dydxprotocol/v4-chain/protocol/testutil/rand"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/sim_helpers"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/simulation"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	perpetualssimulation "github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/simulation"
-	pricessimulation "github.com/dydxprotocol/v4-chain/protocol/x/prices/simulation"
+	testutil_rand "github.com/furyanprotocol/v4-chain/protocol/testutil/rand"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/sim_helpers"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/simulation"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	perpetualssimulation "github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/simulation"
+	pricessimulation "github.com/furyanprotocol/v4-chain/protocol/x/prices/simulation"
 	"github.com/stretchr/testify/require"
 )
 

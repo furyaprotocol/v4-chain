@@ -43,18 +43,18 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	ibctransfertypes "github.com/cosmos/ibc-go/v7/modules/apps/transfer/types"
 	exportedtypes "github.com/cosmos/ibc-go/v7/modules/core/exported"
-	"github.com/dydxprotocol/v4-chain/protocol/app"
-	"github.com/dydxprotocol/v4-chain/protocol/app/basic_manager"
-	daemonflags "github.com/dydxprotocol/v4-chain/protocol/daemons/flags"
-	assetstypes "github.com/dydxprotocol/v4-chain/protocol/x/assets/types"
-	clobtypes "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	epochstypes "github.com/dydxprotocol/v4-chain/protocol/x/epochs/types"
-	perpetualstypes "github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/types"
-	pricestypes "github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
-	rewardsmodule "github.com/dydxprotocol/v4-chain/protocol/x/rewards/types"
-	sendingtypes "github.com/dydxprotocol/v4-chain/protocol/x/sending/types"
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
-	vestmodule "github.com/dydxprotocol/v4-chain/protocol/x/vest/types"
+	"github.com/furyanprotocol/v4-chain/protocol/app"
+	"github.com/furyanprotocol/v4-chain/protocol/app/basic_manager"
+	daemonflags "github.com/furyanprotocol/v4-chain/protocol/daemons/flags"
+	assetstypes "github.com/furyanprotocol/v4-chain/protocol/x/assets/types"
+	clobtypes "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	epochstypes "github.com/furyanprotocol/v4-chain/protocol/x/epochs/types"
+	perpetualstypes "github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/types"
+	pricestypes "github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
+	rewardsmodule "github.com/furyanprotocol/v4-chain/protocol/x/rewards/types"
+	sendingtypes "github.com/furyanprotocol/v4-chain/protocol/x/sending/types"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
+	vestmodule "github.com/furyanprotocol/v4-chain/protocol/x/vest/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -197,7 +197,7 @@ func BenchmarkFullAppSimulation(b *testing.B) {
 
 	appOptions := defaultAppOptionsForSimulation()
 
-	dydxApp := NewSimApp(
+	furyaApp := NewSimApp(
 		b,
 		func() *app.App {
 			return app.New(
@@ -210,30 +210,30 @@ func BenchmarkFullAppSimulation(b *testing.B) {
 				interBlockCacheOpt(),
 			)
 		})
-	dydxApp.WithRandomlyGeneratedOperationsSimulationManager()
+	furyaApp.WithRandomlyGeneratedOperationsSimulationManager()
 
 	// Note: While our app does not use the `vesting` module, the `auth` module still attempts to create
 	// vesting accounts during simulation here:
-	// https://github.com/dydxprotocol/cosmos-sdk/blob/dydx-fork-v0.47.0-rc2/x/auth/simulation/genesis.go#L26
+	// https://github.com/furyaprotocol/cosmos-sdk/blob/furya-fork-v0.47.0-rc2/x/auth/simulation/genesis.go#L26
 	// For this reason, we need to register the `vesting` module interfaces so that the Genesis state of `auth` can be
 	// marshaled properly.
-	vestingtypes.RegisterInterfaces(dydxApp.InterfaceRegistry())
+	vestingtypes.RegisterInterfaces(furyaApp.InterfaceRegistry())
 
 	// Run randomized simulations
 	_, simParams, simErr := simulation.SimulateFromSeed(
 		b,
 		os.Stdout,
-		dydxApp.GetBaseApp(),
-		AppStateFn(dydxApp.AppCodec(), dydxApp.SimulationManager()),
+		furyaApp.GetBaseApp(),
+		AppStateFn(furyaApp.AppCodec(), furyaApp.SimulationManager()),
 		simtypes.RandomAccounts,
-		simtestutil.SimulationOperations(dydxApp, dydxApp.AppCodec(), config),
+		simtestutil.SimulationOperations(furyaApp, furyaApp.AppCodec(), config),
 		app.ModuleAccountAddrs(),
 		config,
-		dydxApp.AppCodec(),
+		furyaApp.AppCodec(),
 	)
 
 	// export state and simParams before the simulation error is checked
-	if err = simtestutil.CheckExportSimulation(dydxApp, config, simParams); err != nil {
+	if err = simtestutil.CheckExportSimulation(furyaApp, config, simParams); err != nil {
 		b.Fatal(err)
 	}
 
@@ -270,7 +270,7 @@ func TestFullAppSimulation(t *testing.T) {
 
 	appOptions := defaultAppOptionsForSimulation()
 
-	dydxApp := NewSimApp(
+	furyaApp := NewSimApp(
 		t,
 		func() *app.App {
 			return app.New(
@@ -282,27 +282,27 @@ func TestFullAppSimulation(t *testing.T) {
 				appOptions,
 			)
 		})
-	dydxApp.WithRandomlyGeneratedOperationsSimulationManager()
-	require.Equal(t, "dydxprotocol", dydxApp.Name())
+	furyaApp.WithRandomlyGeneratedOperationsSimulationManager()
+	require.Equal(t, "furyaprotocol", furyaApp.Name())
 
 	// Note: While our app does not use the `vesting` module, the `auth` module still attempts to create
 	// vesting accounts during simulation here:
-	// https://github.com/dydxprotocol/cosmos-sdk/blob/dydx-fork-v0.47.0-rc2/x/auth/simulation/genesis.go#L26
+	// https://github.com/furyaprotocol/cosmos-sdk/blob/furya-fork-v0.47.0-rc2/x/auth/simulation/genesis.go#L26
 	// For this reason, we need to register the `vesting` module interfaces so that the Genesis state of `auth` can be
 	// marshaled properly.
-	vestingtypes.RegisterInterfaces(dydxApp.InterfaceRegistry())
+	vestingtypes.RegisterInterfaces(furyaApp.InterfaceRegistry())
 
 	// run randomized simulation
 	_, _, simErr := simulation.SimulateFromSeed(
 		t,
 		os.Stdout,
-		dydxApp.GetBaseApp(),
-		AppStateFn(dydxApp.AppCodec(), dydxApp.SimulationManager()),
+		furyaApp.GetBaseApp(),
+		AppStateFn(furyaApp.AppCodec(), furyaApp.SimulationManager()),
 		simtypes.RandomAccounts,
-		simtestutil.SimulationOperations(dydxApp, dydxApp.AppCodec(), config),
+		simtestutil.SimulationOperations(furyaApp, furyaApp.AppCodec(), config),
 		app.ModuleAccountAddrs(),
 		config,
-		dydxApp.AppCodec(),
+		furyaApp.AppCodec(),
 	)
 	require.NoError(t, simErr)
 
@@ -343,7 +343,7 @@ func TestAppStateDeterminism(t *testing.T) {
 			}
 
 			db := dbm.NewMemDB()
-			dydxApp := NewSimApp(
+			furyaApp := NewSimApp(
 				t,
 				func() *app.App {
 					return app.New(
@@ -356,7 +356,7 @@ func TestAppStateDeterminism(t *testing.T) {
 						interBlockCacheOpt(),
 					)
 				})
-			dydxApp.WithRandomlyGeneratedOperationsSimulationManager()
+			furyaApp.WithRandomlyGeneratedOperationsSimulationManager()
 
 			fmt.Printf(
 				"running non-determinism simulation; seed %d: %d/%d, attempt: %d/%d\n",
@@ -365,21 +365,21 @@ func TestAppStateDeterminism(t *testing.T) {
 
 			// Note: While our app does not use the `vesting` module, the `auth` module still attempts to create
 			// vesting accounts during simulation here:
-			// https://github.com/dydxprotocol/cosmos-sdk/blob/dydx-fork-v0.47.0-rc2/x/auth/simulation/genesis.go#L26
+			// https://github.com/furyaprotocol/cosmos-sdk/blob/furya-fork-v0.47.0-rc2/x/auth/simulation/genesis.go#L26
 			// For this reason, we need to register the `vesting` module interfaces so that the Genesis state of `auth` can be
 			// marshaled properly.
-			vestingtypes.RegisterInterfaces(dydxApp.InterfaceRegistry())
+			vestingtypes.RegisterInterfaces(furyaApp.InterfaceRegistry())
 
 			_, _, err := simulation.SimulateFromSeed(
 				t,
 				os.Stdout,
-				dydxApp.GetBaseApp(),
-				AppStateFn(dydxApp.AppCodec(), dydxApp.SimulationManager()),
+				furyaApp.GetBaseApp(),
+				AppStateFn(furyaApp.AppCodec(), furyaApp.SimulationManager()),
 				simtypes.RandomAccounts,
-				simtestutil.SimulationOperations(dydxApp, dydxApp.AppCodec(), config),
+				simtestutil.SimulationOperations(furyaApp, furyaApp.AppCodec(), config),
 				app.ModuleAccountAddrs(),
 				config,
-				dydxApp.AppCodec(),
+				furyaApp.AppCodec(),
 			)
 			require.NoError(t, err)
 
@@ -387,7 +387,7 @@ func TestAppStateDeterminism(t *testing.T) {
 				simtestutil.PrintStats(db)
 			}
 
-			appHash := dydxApp.LastCommitID().Hash
+			appHash := furyaApp.LastCommitID().Hash
 			appHashList[j] = appHash
 
 			if j != 0 {
@@ -548,7 +548,7 @@ func AppStateRandomizedFn(
 		func(r *rand.Rand) {
 			// Since the stake token denom has 18 decimals, the initial stake balance needs to be at least
 			// 1e18 to be considered valid. However, in the current implementation of auth simulation logic
-			// (https://github.com/dydxprotocol/cosmos-sdk/blob/93454d9f/x/auth/simulation/genesis.go#L38),
+			// (https://github.com/furyaprotocol/cosmos-sdk/blob/93454d9f/x/auth/simulation/genesis.go#L38),
 			// `initialStake` is casted to an `int64` value (max_int64 ~= 9.22e18).
 			// As such today the only valid range of values for `initialStake` is [1e18, max_int64]. Note
 			// this only represents 1~9 full coins.

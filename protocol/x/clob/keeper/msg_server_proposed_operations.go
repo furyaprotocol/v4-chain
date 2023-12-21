@@ -4,9 +4,9 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	errorlib "github.com/dydxprotocol/v4-chain/protocol/lib/error"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
+	errorlib "github.com/furyanprotocol/v4-chain/protocol/lib/error"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
 )
 
 func (k msgServer) ProposedOperations(

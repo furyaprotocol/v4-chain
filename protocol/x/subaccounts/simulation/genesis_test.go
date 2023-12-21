@@ -11,11 +11,11 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	banksim "github.com/cosmos/cosmos-sdk/x/bank/simulation"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	testutil_rand "github.com/dydxprotocol/v4-chain/protocol/testutil/rand"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/sim_helpers"
-	asstypes "github.com/dydxprotocol/v4-chain/protocol/x/assets/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/simulation"
-	"github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	testutil_rand "github.com/furyanprotocol/v4-chain/protocol/testutil/rand"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/sim_helpers"
+	asstypes "github.com/furyanprotocol/v4-chain/protocol/x/assets/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/simulation"
+	"github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -2,8 +2,8 @@ import {
   logger,
   wrapBackgroundTask,
   startBugsnag,
-} from '@dydxprotocol-indexer/base';
-import { perpetualMarketRefresher, liquidityTierRefresher } from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/base';
+import { perpetualMarketRefresher, liquidityTierRefresher } from '@furyaprotocol-indexer/postgres';
 
 import config from './config';
 import IndexV4 from './controllers/api/index-v4';

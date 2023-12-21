@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/constants"
 
 	errorsmod "cosmossdk.io/errors"
 
@@ -20,9 +20,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
-	"github.com/dydxprotocol/v4-chain/protocol/x/vest/types"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/x/vest/types"
 )
 
 type (

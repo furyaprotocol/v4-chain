@@ -1,6 +1,6 @@
 package exchange_config
 
-import "github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/types"
+import "github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/types"
 
 // All market ids must match with the genesis state.
 const (
@@ -78,6 +78,6 @@ const (
 	// Non-trading markets.
 	// MARKET_USDT_USD is the id for the USDT-USD market pair.
 	MARKET_USDT_USD types.MarketId = 1_000_000
-	// MARKET_DYDX_USD is the id for the DYDX-USD market pair.
-	MARKET_DYDX_USD types.MarketId = 1_000_001
+	// MARKET_FURYA_USD is the id for the FURYA-USD market pair.
+	MARKET_FURYA_USD types.MarketId = 1_000_001
 )

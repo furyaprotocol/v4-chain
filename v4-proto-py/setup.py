@@ -7,7 +7,7 @@ setup(
     name="v4-proto",
     version="0.0.0",
     author="dYdX Trading Inc.",
-    author_email="contact@dydx.exchange",
+    author_email="contact@furya.exchange",
     description="Protos for dYdX Chain protocol",
     packages = find_namespace_packages(),
     include_package_data=True,  # Include files specified in MANIFEST.in

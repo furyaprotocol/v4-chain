@@ -1,5 +1,5 @@
-import { logger } from '@dydxprotocol-indexer/base';
-import { MarketEventV1 } from '@dydxprotocol-indexer/v4-protos';
+import { logger } from '@furyaprotocol-indexer/base';
+import { MarketEventV1 } from '@furyaprotocol-indexer/v4-protos';
 import * as pg from 'pg';
 
 import { ConsolidatedKafkaEvent } from '../../lib/types';

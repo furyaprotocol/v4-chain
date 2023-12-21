@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/price_function/mexc"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/price_function/testutil"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/daemons/pricefeed"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/price_function/mexc"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/price_function/testutil"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/daemons/pricefeed"
 	"github.com/stretchr/testify/require"
 )
 

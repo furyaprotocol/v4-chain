@@ -6,7 +6,7 @@ import {
   SUBACCOUNTS_WEBSOCKET_MESSAGE_VERSION,
   TRADES_WEBSOCKET_MESSAGE_VERSION,
   KafkaTopics,
-} from '@dydxprotocol-indexer/kafka';
+} from '@furyaprotocol-indexer/kafka';
 import {
   FillFromDatabase,
   FillTable,
@@ -30,8 +30,8 @@ import {
   PerpetualMarketTable,
   IsoString,
   fillTypeToTradeType,
-} from '@dydxprotocol-indexer/postgres';
-import { getOrderIdHash } from '@dydxprotocol-indexer/v4-proto-parser';
+} from '@furyaprotocol-indexer/postgres';
+import { getOrderIdHash } from '@furyaprotocol-indexer/v4-proto-parser';
 import {
   LiquidationOrderV1,
   MarketMessage,
@@ -50,7 +50,7 @@ import {
   IndexerOrderId,
   PerpetualMarketCreateEventV1,
   DeleveragingEventV1,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import { Message, ProducerRecord } from 'kafkajs';
 import _ from 'lodash';
 
@@ -61,7 +61,7 @@ import {
   generatePerpetualPositionsContents,
 } from '../../src/helpers/kafka-helper';
 import { protoTimestampToDate } from '../../src/lib/helper';
-import { DydxIndexerSubtypes, VulcanMessage } from '../../src/lib/types';
+import { FuryaIndexerSubtypes, VulcanMessage } from '../../src/lib/types';
 
 // TX Hash is SHA256, so is of length 64 hexadecimal without the '0x'.
 // This can be generated from 32 characters, because each character generates two
@@ -454,7 +454,7 @@ export function createKafkaMessageFromOrderFillEvent({
 }) {
   const events: IndexerTendermintEvent[] = [
     createIndexerTendermintEvent(
-      DydxIndexerSubtypes.ORDER_FILL,
+      FuryaIndexerSubtypes.ORDER_FILL,
       Uint8Array.from(OrderFillEventV1.encode(orderFillEvent).finish()),
       transactionIndex,
       eventIndex,
@@ -489,7 +489,7 @@ export function createKafkaMessageFromDeleveragingEvent({
 }) {
   const events: IndexerTendermintEvent[] = [
     createIndexerTendermintEvent(
-      DydxIndexerSubtypes.DELEVERAGING,
+      FuryaIndexerSubtypes.DELEVERAGING,
       Uint8Array.from(DeleveragingEventV1.encode(deleveragingEvent).finish()),
       transactionIndex,
       eventIndex,

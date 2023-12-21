@@ -1,13 +1,13 @@
 import {
   OrderTable,
-} from '@dydxprotocol-indexer/postgres';
-import { getOrderIdHash } from '@dydxprotocol-indexer/v4-proto-parser';
+} from '@furyaprotocol-indexer/postgres';
+import { getOrderIdHash } from '@furyaprotocol-indexer/v4-proto-parser';
 import {
   OffChainUpdateV1,
   IndexerOrderId,
   OrderRemoveV1_OrderRemovalStatus,
   StatefulOrderEventV1,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import * as pg from 'pg';
 
 import { ConsolidatedKafkaEvent } from '../../lib/types';

@@ -3,14 +3,14 @@ import {
   stats,
   STATS_FUNCTION_NAME,
   wrapBackgroundTask,
-} from '@dydxprotocol-indexer/base';
-import { synchronizeWrapBackgroundTask } from '@dydxprotocol-indexer/dev';
+} from '@furyaprotocol-indexer/base';
+import { synchronizeWrapBackgroundTask } from '@furyaprotocol-indexer/dev';
 import {
   createKafkaMessage,
   ORDERBOOKS_WEBSOCKET_MESSAGE_VERSION,
   producer,
   SUBACCOUNTS_WEBSOCKET_MESSAGE_VERSION,
-} from '@dydxprotocol-indexer/kafka';
+} from '@furyaprotocol-indexer/kafka';
 import {
   APIOrderStatus,
   APIOrderStatusEnum,
@@ -27,8 +27,8 @@ import {
   testConstants,
   testMocks,
   TimeInForce,
-} from '@dydxprotocol-indexer/postgres';
-import * as redisPackage from '@dydxprotocol-indexer/redis';
+} from '@furyaprotocol-indexer/postgres';
+import * as redisPackage from '@furyaprotocol-indexer/redis';
 import {
   OpenOrdersCache,
   PriceLevel,
@@ -42,7 +42,7 @@ import {
   updateOrder,
   StatefulOrderUpdatesCache,
   CanceledOrderStatus,
-} from '@dydxprotocol-indexer/redis';
+} from '@furyaprotocol-indexer/redis';
 
 import {
   OffChainUpdateV1,
@@ -53,7 +53,7 @@ import {
   SubaccountId,
   SubaccountMessage,
   OrderUpdateV1,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import { KafkaMessage } from 'kafkajs';
 import Long from 'long';
 import { convertToRedisOrder, getTriggerPrice } from '../../src/handlers/helpers';
@@ -62,10 +62,10 @@ import { onMessage } from '../../src/lib/on-message';
 import { expectCanceledOrderStatus, expectOpenOrderIds, handleInitialOrderPlace } from '../helpers/helpers';
 import { expectOffchainUpdateMessage, expectWebsocketOrderbookMessage, expectWebsocketSubaccountMessage } from '../helpers/websocket-helpers';
 import { OrderbookSide } from '../../src/lib/types';
-import { getOrderIdHash, isStatefulOrder } from '@dydxprotocol-indexer/v4-proto-parser';
+import { getOrderIdHash, isStatefulOrder } from '@furyaprotocol-indexer/v4-proto-parser';
 
-jest.mock('@dydxprotocol-indexer/base', () => ({
-  ...jest.requireActual('@dydxprotocol-indexer/base'),
+jest.mock('@furyaprotocol-indexer/base', () => ({
+  ...jest.requireActual('@furyaprotocol-indexer/base'),
   wrapBackgroundTask: jest.fn(),
 }));
 

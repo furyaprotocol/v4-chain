@@ -1,21 +1,21 @@
-import { logger, stats } from '@dydxprotocol-indexer/base';
+import { logger, stats } from '@furyaprotocol-indexer/base';
 import _ from 'lodash';
 import * as pg from 'pg';
 
 import config from '../config';
 import { Handler } from '../handlers/handler';
 import { KafkaPublisher } from './kafka-publisher';
-import { ConsolidatedKafkaEvent, DydxIndexerSubtypes, EventMessage } from './types';
+import { ConsolidatedKafkaEvent, FuryaIndexerSubtypes, EventMessage } from './types';
 
 // type alias for an array of handlers.
 type HandlerBatch = Handler<EventMessage>[];
-export const SYNCHRONOUS_SUBTYPES: DydxIndexerSubtypes[] = [
-  DydxIndexerSubtypes.MARKET,
-  DydxIndexerSubtypes.ASSET,
-  DydxIndexerSubtypes.LIQUIDITY_TIER,
-  DydxIndexerSubtypes.PERPETUAL_MARKET,
-  DydxIndexerSubtypes.UPDATE_PERPETUAL,
-  DydxIndexerSubtypes.UPDATE_CLOB_PAIR,
+export const SYNCHRONOUS_SUBTYPES: FuryaIndexerSubtypes[] = [
+  FuryaIndexerSubtypes.MARKET,
+  FuryaIndexerSubtypes.ASSET,
+  FuryaIndexerSubtypes.LIQUIDITY_TIER,
+  FuryaIndexerSubtypes.PERPETUAL_MARKET,
+  FuryaIndexerSubtypes.UPDATE_PERPETUAL,
+  FuryaIndexerSubtypes.UPDATE_CLOB_PAIR,
 ];
 
 /**
@@ -44,7 +44,7 @@ export class SyncHandlers {
    * @param handler The handler to add to the batched handlers
    */
   public addHandler(
-    indexerSubtype: DydxIndexerSubtypes,
+    indexerSubtype: FuryaIndexerSubtypes,
     handler: Handler<EventMessage>,
   ): void {
     if (!SYNCHRONOUS_SUBTYPES.includes(indexerSubtype)) {

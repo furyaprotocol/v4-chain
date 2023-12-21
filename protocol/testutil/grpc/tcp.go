@@ -1,6 +1,6 @@
 package grpc
 
-import "github.com/dydxprotocol/v4-chain/protocol/mocks"
+import "github.com/furyanprotocol/v4-chain/protocol/mocks"
 
 var (
 	TcpEndpoint = "localhost:9090"

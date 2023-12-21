@@ -10,9 +10,9 @@ import (
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"
 	"github.com/stretchr/testify/require"
 
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/network"
-	"github.com/dydxprotocol/v4-chain/protocol/x/feetiers/client/cli"
-	"github.com/dydxprotocol/v4-chain/protocol/x/feetiers/types"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/network"
+	"github.com/furyanprotocol/v4-chain/protocol/x/feetiers/client/cli"
+	"github.com/furyanprotocol/v4-chain/protocol/x/feetiers/types"
 )
 
 // Prevent strconv unused error

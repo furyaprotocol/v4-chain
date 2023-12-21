@@ -20,8 +20,8 @@ import {
   getOrderIdsForSubaccountBySubaccountId,
 } from './helpers';
 import { removeOrder } from '../../src/caches/remove-order';
-import { OrderTable } from '@dydxprotocol-indexer/postgres';
-import { ORDER_FLAG_SHORT_TERM } from '@dydxprotocol-indexer/v4-proto-parser';
+import { OrderTable } from '@furyaprotocol-indexer/postgres';
+import { ORDER_FLAG_SHORT_TERM } from '@furyaprotocol-indexer/v4-proto-parser';
 import { getOrderExpiry } from '../../src/caches/helpers';
 
 describe('removeOrder', () => {

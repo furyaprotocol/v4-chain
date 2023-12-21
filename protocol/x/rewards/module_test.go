@@ -11,10 +11,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/daemons/pricefeed"
-	keepertest "github.com/dydxprotocol/v4-chain/protocol/testutil/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/rewards"
-	rewards_keeper "github.com/dydxprotocol/v4-chain/protocol/x/rewards/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/daemons/pricefeed"
+	keepertest "github.com/furyanprotocol/v4-chain/protocol/testutil/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/rewards"
+	rewards_keeper "github.com/furyanprotocol/v4-chain/protocol/x/rewards/keeper"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/stretchr/testify/require"
 )
@@ -91,14 +91,14 @@ func TestAppModuleBasic_RegisterGRPCGatewayRoutes(t *testing.T) {
 
 	// Expect NumMessages route registered
 	recorder := httptest.NewRecorder()
-	req, err := http.NewRequest("GET", "/dydxprotocol/v4/rewards/params", nil)
+	req, err := http.NewRequest("GET", "/furyaprotocol/v4/rewards/params", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")
 
 	// Expect unexpected route not registered
 	recorder = httptest.NewRecorder()
-	req, err = http.NewRequest("GET", "/dydxprotocol/v4/rewards/foo/bar/baz", nil)
+	req, err = http.NewRequest("GET", "/furyaprotocol/v4/rewards/foo/bar/baz", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Equal(t, 404, recorder.Code)

@@ -1,13 +1,13 @@
-import { logger, ParseMessageError } from '@dydxprotocol-indexer/base';
+import { logger, ParseMessageError } from '@furyaprotocol-indexer/base';
 import {
   IndexerTendermintBlock,
   IndexerTendermintEvent,
   UpdatePerpetualEventV1,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import {
   dbHelpers, testMocks, perpetualMarketRefresher,
-} from '@dydxprotocol-indexer/postgres';
-import { DydxIndexerSubtypes } from '../../src/lib/types';
+} from '@furyaprotocol-indexer/postgres';
+import { FuryaIndexerSubtypes } from '../../src/lib/types';
 import {
   defaultUpdatePerpetualEvent,
   defaultHeight,
@@ -75,7 +75,7 @@ function createBlock(
   updatePerpetualEvent: UpdatePerpetualEventV1,
 ): IndexerTendermintBlock {
   const event: IndexerTendermintEvent = createIndexerTendermintEvent(
-    DydxIndexerSubtypes.UPDATE_PERPETUAL,
+    FuryaIndexerSubtypes.UPDATE_PERPETUAL,
     UpdatePerpetualEventV1.encode(updatePerpetualEvent).finish(),
     0,
     0,

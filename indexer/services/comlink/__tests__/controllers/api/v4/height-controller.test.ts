@@ -5,8 +5,8 @@ import {
   BlockTable,
   dbHelpers,
   testMocks,
-} from '@dydxprotocol-indexer/postgres';
-import { stats } from '@dydxprotocol-indexer/base';
+} from '@furyaprotocol-indexer/postgres';
+import { stats } from '@furyaprotocol-indexer/base';
 
 describe('height-controller#V4', () => {
   beforeAll(async () => {

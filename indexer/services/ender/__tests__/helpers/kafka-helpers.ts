@@ -1,14 +1,14 @@
-import { createKafkaMessage } from '@dydxprotocol-indexer/kafka';
+import { createKafkaMessage } from '@furyaprotocol-indexer/kafka';
 import {
   IndexerTendermintBlock,
   IndexerTendermintEvent,
   Timestamp,
   MarketEventV1,
   StatefulOrderEventV1,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import { KafkaMessage } from 'kafkajs';
 
-import { DydxIndexerSubtypes } from '../../src/lib/types';
+import { FuryaIndexerSubtypes } from '../../src/lib/types';
 import { defaultHeight, defaultTime, defaultTxHash } from './constants';
 import { createIndexerTendermintBlock, createIndexerTendermintEvent } from './indexer-proto-helpers';
 
@@ -29,7 +29,7 @@ export function createKafkaMessageFromMarketEvent({
   for (let eventIndex: number = 0; eventIndex < marketEvents.length; eventIndex++) {
     events.push(
       createIndexerTendermintEvent(
-        DydxIndexerSubtypes.MARKET,
+        FuryaIndexerSubtypes.MARKET,
         MarketEventV1.encode(marketEvents[eventIndex]).finish(),
         transactionIndex,
         eventIndex,
@@ -58,7 +58,7 @@ export function createKafkaMessageFromStatefulOrderEvent(
   const events: IndexerTendermintEvent[] = [];
   events.push(
     createIndexerTendermintEvent(
-      DydxIndexerSubtypes.STATEFUL_ORDER,
+      FuryaIndexerSubtypes.STATEFUL_ORDER,
       StatefulOrderEventV1.encode(event).finish(),
       transactionIndex,
       0,

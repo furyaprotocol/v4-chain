@@ -1,7 +1,7 @@
 package ante
 
 import (
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
 	"testing"
 
 	"github.com/golang/mock/gomock"

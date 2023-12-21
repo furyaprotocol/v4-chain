@@ -1,5 +1,5 @@
-import { INDEXER_COMPLIANCE_BLOCKED_PAYLOAD } from '@dydxprotocol-indexer/compliance';
-import { ComplianceDataFromDatabase, ComplianceTable } from '@dydxprotocol-indexer/postgres';
+import { INDEXER_COMPLIANCE_BLOCKED_PAYLOAD } from '@furyaprotocol-indexer/compliance';
+import { ComplianceDataFromDatabase, ComplianceTable } from '@furyaprotocol-indexer/postgres';
 import express from 'express';
 import { matchedData } from 'express-validator';
 

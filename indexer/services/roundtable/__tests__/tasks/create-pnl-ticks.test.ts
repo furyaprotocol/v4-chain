@@ -9,14 +9,14 @@ import {
   testMocks,
   TransferTable,
   FundingIndexUpdatesTable,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 
 import createPnlTicksTask, { normalizeStartTime } from '../../src/tasks/create-pnl-ticks';
-import { LatestAccountPnlTicksCache, PnlTickForSubaccounts, redis } from '@dydxprotocol-indexer/redis';
+import { LatestAccountPnlTicksCache, PnlTickForSubaccounts, redis } from '@furyaprotocol-indexer/redis';
 import { DateTime } from 'luxon';
 import config from '../../src/config';
 import { redisClient } from '../../src/helpers/redis';
-import { logger } from '@dydxprotocol-indexer/base';
+import { logger } from '@furyaprotocol-indexer/base';
 
 describe('create-pnl-ticks', () => {
 

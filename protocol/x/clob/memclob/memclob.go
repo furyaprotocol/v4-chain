@@ -13,13 +13,13 @@ import (
 	"github.com/cometbft/cometbft/libs/log"
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/off_chain_updates"
-	indexershared "github.com/dydxprotocol/v4-chain/protocol/indexer/shared"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	perptypes "github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/types"
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/off_chain_updates"
+	indexershared "github.com/furyanprotocol/v4-chain/protocol/indexer/shared"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	perptypes "github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/types"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 )
 
 // Ensure that `memClobPriceTimePriority` struct properly implements

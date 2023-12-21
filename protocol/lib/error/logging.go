@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/cometbft/cometbft/libs/log"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

@@ -1,4 +1,4 @@
-import { stats } from '@dydxprotocol-indexer/base';
+import { stats } from '@furyaprotocol-indexer/base';
 import express from 'express';
 
 import config from '../config';

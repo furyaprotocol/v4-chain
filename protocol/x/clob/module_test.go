@@ -10,10 +10,10 @@ import (
 	"testing"
 
 	sdkmath "cosmossdk.io/math"
-	indexerevents "github.com/dydxprotocol/v4-chain/protocol/indexer/events"
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/indexer_manager"
+	indexerevents "github.com/furyanprotocol/v4-chain/protocol/indexer/events"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/indexer_manager"
 
-	"github.com/dydxprotocol/v4-chain/protocol/dtypes"
+	"github.com/furyanprotocol/v4-chain/protocol/dtypes"
 
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cosmos/cosmos-sdk/client"
@@ -21,18 +21,18 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/tx"
-	liquidations_types "github.com/dydxprotocol/v4-chain/protocol/daemons/server/types/liquidations"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob"
-	clob_keeper "github.com/dydxprotocol/v4-chain/protocol/x/clob/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/memclob"
-	clob_types "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/perpetuals"
-	perp_keeper "github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/prices"
-	prices_keeper "github.com/dydxprotocol/v4-chain/protocol/x/prices/keeper"
+	liquidations_types "github.com/furyanprotocol/v4-chain/protocol/daemons/server/types/liquidations"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob"
+	clob_keeper "github.com/furyanprotocol/v4-chain/protocol/x/clob/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/memclob"
+	clob_types "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/perpetuals"
+	perp_keeper "github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/prices"
+	prices_keeper "github.com/furyanprotocol/v4-chain/protocol/x/prices/keeper"
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/stretchr/testify/mock"
@@ -238,14 +238,14 @@ func TestAppModuleBasic_RegisterGRPCGatewayRoutes(t *testing.T) {
 
 	// Expect AllClobPairs route registered
 	recorder := httptest.NewRecorder()
-	req, err := http.NewRequest("GET", "/dydxprotocol/clob/clob_pair", nil)
+	req, err := http.NewRequest("GET", "/furyaprotocol/clob/clob_pair", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")
 
 	// Expect ClobPair route registered
 	recorder = httptest.NewRecorder()
-	req, err = http.NewRequest("GET", "/dydxprotocol/clob/clob_pair/0", nil)
+	req, err = http.NewRequest("GET", "/furyaprotocol/clob/clob_pair/0", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")

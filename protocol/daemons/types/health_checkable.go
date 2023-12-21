@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 	"github.com/cometbft/cometbft/libs/log"
-	libtime "github.com/dydxprotocol/v4-chain/protocol/lib/time"
+	libtime "github.com/furyanprotocol/v4-chain/protocol/lib/time"
 	"sync"
 	"time"
 )

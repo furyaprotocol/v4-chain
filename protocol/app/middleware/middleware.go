@@ -8,7 +8,7 @@ import (
 
 	"github.com/cometbft/cometbft/libs/log"
 	"github.com/cosmos/cosmos-sdk/baseapp"
-	"github.com/dydxprotocol/v4-chain/protocol/app/basic_manager"
+	"github.com/furyanprotocol/v4-chain/protocol/app/basic_manager"
 )
 
 var (

@@ -1,4 +1,4 @@
-import { stats } from '@dydxprotocol-indexer/base';
+import { stats } from '@furyaprotocol-indexer/base';
 import {
   PerpetualMarketColumns,
   PerpetualMarketFromDatabase,
@@ -8,7 +8,7 @@ import {
   liquidityTierRefresher,
   LiquidityTiersMap,
   LiquidityTiersFromDatabase,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import express from 'express';
 import {
   matchedData,

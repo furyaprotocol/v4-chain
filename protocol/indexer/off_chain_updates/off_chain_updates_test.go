@@ -8,13 +8,13 @@ import (
 
 	"github.com/cometbft/cometbft/libs/log"
 	"github.com/cosmos/gogoproto/proto"
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/msgsender"
-	v1 "github.com/dydxprotocol/v4-chain/protocol/indexer/protocol/v1"
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/shared"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	clobtypes "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/msgsender"
+	v1 "github.com/furyanprotocol/v4-chain/protocol/indexer/protocol/v1"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/shared"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	clobtypes "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 	"github.com/stretchr/testify/require"
 )
 

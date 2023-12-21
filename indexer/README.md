@@ -1,10 +1,10 @@
-<p align="center"><img src="https://dydx.exchange/icon.svg?" width="256" /></p>
+<p align="center"><img src="https://furya.exchange/icon.svg?" width="256" /></p>
 
 <h1 align="center">v4 Indexer</h1>
 
 <div align="center">
-  <a href="https://github.com/dydxprotocol/v4-chain/actions/workflows/indexer-build-test-coverage.yml?query=branch%3Amain" style="text-decoration:none;">
-    <img src="https://github.com/dydxprotocol/v4-chain/actions/workflows/indexer-build-test-coverage.yml/badge.svg?branch=main" />
+  <a href="https://github.com/furyanprotocol/v4-chain/actions/workflows/indexer-build-test-coverage.yml?query=branch%3Amain" style="text-decoration:none;">
+    <img src="https://github.com/furyanprotocol/v4-chain/actions/workflows/indexer-build-test-coverage.yml/badge.svg?branch=main" />
   </a>
 </div>
 
@@ -49,7 +49,7 @@ Use `packages/example-package` as a template:
 ```
 cp -r packages/example-package packages/<package-name>
 ```
-- Update `package.json` name to `@dydxprotocol-indexer/<package-name>`, update the `README.md`, and run `pnpm i` to install dependencies.
+- Update `package.json` name to `@furyaprotocol-indexer/<package-name>`, update the `README.md`, and run `pnpm i` to install dependencies.
 - Add in `Dockerfile.service.local`, `Dockerfile.service.remote`, and `Dockerfile.postgres-package.local` to copy the `package.json` file and `build/` files.
 - Add in `Dockerfile.bazooka.remote` to copy the package directory
 
@@ -74,7 +74,7 @@ NOTE: `pnpm` allows running scripts across all directories using the `-r` flag o
 
 ## Protos
 
-Protos can be found in `proto/` [here](https://github.com/dydxprotocol/v4-chain/tree/main/proto).
+Protos can be found in `proto/` [here](https://github.com/furyanprotocol/v4-chain/tree/main/proto).
 
 ## Running unit tests
 
@@ -123,7 +123,7 @@ remove all the containers, then try running `docker-compose -f docker-compose-lo
 
 ### Running local V4 node
 By default the Indexer services connect to a local V4 node. To run a local V4 node alongside the indexer, 
-follow the instructions [here](https://github.com/dydxprotocol/v4#running-the-chain-locally).
+follow the instructions [here](https://github.com/furyaprotocol/v4#running-the-chain-locally).
 
 NOTE: The local V4 node needs to be started up before deploying the Indexer locally.
 ### Connecting to remote V4 node
@@ -147,7 +147,7 @@ comlink:
 ```
 
 ### Deploying to AWS Dev Environment
-We use [Terraform](https://github.com/dydxprotocol/v4-infrastructure) to describe our infrastructure. On merging to
+We use [Terraform](https://github.com/furyaprotocol/v4-infrastructure) to describe our infrastructure. On merging to
 master branch, we automatically build ECR images of each service for both the dev/staging environments (see .github/workflows directory).
 However, if you want to test and deploy local changes, you can use the `scripts/deploy-commit-to-dev.sh` script.
 
@@ -197,7 +197,7 @@ To connect to the dev/staging endpoints, use the following commands:
 wscli connect ws://dev-indexer-apne1-lb-public-890774175.ap-northeast-1.elb.amazonaws.com/v4/ws
 
 # staging
-wscli connect wss://indexer.v4staging.dydx.exchange/v4/ws
+wscli connect wss://indexer.v4staging.furya.exchange/v4/ws
 ```
 
 Use a command-line websocket client such as 

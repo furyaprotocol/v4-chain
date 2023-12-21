@@ -1,11 +1,11 @@
-import { Liquidity } from '@dydxprotocol-indexer/postgres';
+import { Liquidity } from '@furyaprotocol-indexer/postgres';
 import {
   IndexerAssetPosition,
   IndexerOrder,
   IndexerPerpetualPosition,
   IndexerSubaccountId, LiquidationOrderV1,
-} from '@dydxprotocol-indexer/v4-protos';
-import { Long } from '@dydxprotocol-indexer/v4-protos/build/codegen/helpers';
+} from '@furyaprotocol-indexer/v4-protos';
+import { Long } from '@furyaprotocol-indexer/v4-protos/build/codegen/helpers';
 
 /* Canonical object types for handling onchain messages from the protocol. */
 

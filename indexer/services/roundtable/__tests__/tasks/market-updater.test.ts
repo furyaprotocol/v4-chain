@@ -17,23 +17,23 @@ import {
   LiquidityTiersTable,
   LiquidityTiersMap,
   LiquidityTiersColumns,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import _ from 'lodash';
 
 import { getUpdatedMarkets } from '../../src/helpers/websocket';
 import marketUpdaterTask, { getPriceChange } from '../../src/tasks/market-updater';
 import { expectMarketWebsocketMessage } from '../helpers/websocket-helpers';
-import { producer } from '@dydxprotocol-indexer/kafka';
-import { wrapBackgroundTask } from '@dydxprotocol-indexer/base';
+import { producer } from '@furyaprotocol-indexer/kafka';
+import { wrapBackgroundTask } from '@furyaprotocol-indexer/base';
 
-import { synchronizeWrapBackgroundTask } from '@dydxprotocol-indexer/dev';
-import { NextFundingCache, redis } from '@dydxprotocol-indexer/redis';
+import { synchronizeWrapBackgroundTask } from '@furyaprotocol-indexer/dev';
+import { NextFundingCache, redis } from '@furyaprotocol-indexer/redis';
 import { redisClient } from '../../src/helpers/redis';
 import Big from 'big.js';
 import { DateTime } from 'luxon';
 
-jest.mock('@dydxprotocol-indexer/base', () => ({
-  ...jest.requireActual('@dydxprotocol-indexer/base'),
+jest.mock('@furyaprotocol-indexer/base', () => ({
+  ...jest.requireActual('@furyaprotocol-indexer/base'),
   wrapBackgroundTask: jest.fn(),
 }));
 

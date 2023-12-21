@@ -16,9 +16,9 @@ import (
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/dydxprotocol/v4-chain/protocol/x/blocktime/client/cli"
-	"github.com/dydxprotocol/v4-chain/protocol/x/blocktime/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/blocktime/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/blocktime/client/cli"
+	"github.com/furyanprotocol/v4-chain/protocol/x/blocktime/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/blocktime/types"
 )
 
 var (

@@ -1,7 +1,7 @@
 package clob_test
 
 import (
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 	"testing"
 
 	abcitypes "github.com/cometbft/cometbft/abci/types"
@@ -9,10 +9,10 @@ import (
 
 	"github.com/cometbft/cometbft/types"
 
-	testapp "github.com/dydxprotocol/v4-chain/protocol/testutil/app"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	testtx "github.com/dydxprotocol/v4-chain/protocol/testutil/tx"
-	clobtypes "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
+	testapp "github.com/furyanprotocol/v4-chain/protocol/testutil/app"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	testtx "github.com/furyanprotocol/v4-chain/protocol/testutil/tx"
+	clobtypes "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
 	"github.com/stretchr/testify/require"
 )
 

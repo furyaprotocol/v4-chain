@@ -1,18 +1,18 @@
-import { createKafkaMessage } from '@dydxprotocol-indexer/kafka';
-import { OrderSide } from '@dydxprotocol-indexer/postgres';
+import { createKafkaMessage } from '@furyaprotocol-indexer/kafka';
+import { OrderSide } from '@furyaprotocol-indexer/postgres';
 import {
   OpenOrdersCache,
   redisTestConstants,
   OrderbookLevelsCache,
   CanceledOrdersCache,
   CanceledOrderStatus,
-} from '@dydxprotocol-indexer/redis';
-import { OffChainUpdateV1 } from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/redis';
+import { OffChainUpdateV1 } from '@furyaprotocol-indexer/v4-protos';
 import { KafkaMessage } from 'kafkajs';
 
 import { redisClient } from '../../src/helpers/redis/redis-controller';
 import { onMessage } from '../../src/lib/on-message';
-import { DydxRecordHeaderKeys } from '../../src/lib/types';
+import { FuryaRecordHeaderKeys } from '../../src/lib/types';
 
 export async function handleInitialOrderPlace(
   orderPlace: redisTestConstants.OffChainUpdateOrderPlaceUpdateMessage,
@@ -77,7 +77,7 @@ export function setTransactionHash(
     messageWithTxhash.headers = {};
   }
 
-  messageWithTxhash.headers![DydxRecordHeaderKeys.TRANSACTION_HASH_KEY] = txHash;
+  messageWithTxhash.headers![FuryaRecordHeaderKeys.TRANSACTION_HASH_KEY] = txHash;
   return messageWithTxhash;
 }
 

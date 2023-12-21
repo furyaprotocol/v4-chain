@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
 	"testing"
 
 	tmdb "github.com/cometbft/cometbft-db"
@@ -12,11 +12,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module/testutil"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
-	bridgekeeper "github.com/dydxprotocol/v4-chain/protocol/x/bridge/keeper"
-	bridgetypes "github.com/dydxprotocol/v4-chain/protocol/x/bridge/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/delaymsg/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/delaymsg/types"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
+	bridgekeeper "github.com/furyanprotocol/v4-chain/protocol/x/bridge/keeper"
+	bridgetypes "github.com/furyanprotocol/v4-chain/protocol/x/bridge/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/delaymsg/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/delaymsg/types"
 )
 
 func DelayMsgKeepers(

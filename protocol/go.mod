@@ -1,4 +1,4 @@
-module github.com/dydxprotocol/v4-chain/protocol
+module github.com/furyanprotocol/v4-chain/protocol
 
 go 1.21
 

@@ -1,7 +1,7 @@
 package constants
 
 import (
-	clobtypes "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
+	clobtypes "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
 )
 
 var (

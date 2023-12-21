@@ -6,7 +6,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"google.golang.org/grpc/codes"
 
-	"github.com/dydxprotocol/v4-chain/protocol/x/delaymsg/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/delaymsg/types"
 	"google.golang.org/grpc/status"
 )
 

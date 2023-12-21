@@ -6,11 +6,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	appmsgs "github.com/dydxprotocol/v4-chain/protocol/app/msgs"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/ante"
-	testmsgs "github.com/dydxprotocol/v4-chain/protocol/testutil/msgs"
-	pricestypes "github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
+	appmsgs "github.com/furyanprotocol/v4-chain/protocol/app/msgs"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/ante"
+	testmsgs "github.com/furyanprotocol/v4-chain/protocol/testutil/msgs"
+	pricestypes "github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
 )
 
 func TestIsSingleAppInjectedMsg(t *testing.T) {

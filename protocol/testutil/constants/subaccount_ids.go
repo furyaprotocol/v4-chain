@@ -2,13 +2,13 @@ package constants
 
 import (
 	"github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/app/config"
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	"github.com/furyanprotocol/v4-chain/protocol/app/config"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 )
 
 func init() {
 	// This package does not contain the `app/config` package in its import chain, and therefore needs to call
-	// SetAddressPrefixes() explicitly in order to set the `dydx` address prefixes.
+	// SetAddressPrefixes() explicitly in order to set the `furya` address prefixes.
 	config.SetAddressPrefixes()
 }
 

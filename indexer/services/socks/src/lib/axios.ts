@@ -1,4 +1,4 @@
-import { safeAxiosRequest } from '@dydxprotocol-indexer/base';
+import { safeAxiosRequest } from '@furyaprotocol-indexer/base';
 import { AxiosRequestConfig } from 'axios';
 
 import config from '../config';

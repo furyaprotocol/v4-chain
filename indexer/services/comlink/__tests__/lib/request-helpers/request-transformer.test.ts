@@ -14,12 +14,12 @@ import {
   BestEffortOpenedStatus,
   LiquidityTiersFromDatabase,
   helpers,
-} from '@dydxprotocol-indexer/postgres';
-import { OrderbookLevels, redisTestConstants } from '@dydxprotocol-indexer/redis';
+} from '@furyaprotocol-indexer/postgres';
+import { OrderbookLevels, redisTestConstants } from '@furyaprotocol-indexer/redis';
 import {
   IndexerOrder_TimeInForce,
   RedisOrder,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import Big from 'big.js';
 import {
   OrderbookLevelsToResponseObject,

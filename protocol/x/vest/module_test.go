@@ -13,13 +13,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/tx"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/daemons/pricefeed"
-	keepertest "github.com/dydxprotocol/v4-chain/protocol/testutil/keeper"
-	bridgetypes "github.com/dydxprotocol/v4-chain/protocol/x/bridge/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/vest"
-	vest_keeper "github.com/dydxprotocol/v4-chain/protocol/x/vest/keeper"
-	vesttypes "github.com/dydxprotocol/v4-chain/protocol/x/vest/types"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/daemons/pricefeed"
+	keepertest "github.com/furyanprotocol/v4-chain/protocol/testutil/keeper"
+	bridgetypes "github.com/furyanprotocol/v4-chain/protocol/x/bridge/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/vest"
+	vest_keeper "github.com/furyanprotocol/v4-chain/protocol/x/vest/keeper"
+	vesttypes "github.com/furyanprotocol/v4-chain/protocol/x/vest/types"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
@@ -149,14 +149,14 @@ func TestAppModuleBasic_RegisterGRPCGatewayRoutes(t *testing.T) {
 
 	// Expect NumMessages route registered
 	recorder := httptest.NewRecorder()
-	req, err := http.NewRequest("GET", "/dydxprotocol/v4/vest/vest_entry", nil)
+	req, err := http.NewRequest("GET", "/furyaprotocol/v4/vest/vest_entry", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")
 
 	// Expect unexpected route not registered
 	recorder = httptest.NewRecorder()
-	req, err = http.NewRequest("GET", "/dydxprotocol/v4/vest/foo/bar/baz", nil)
+	req, err = http.NewRequest("GET", "/furyaprotocol/v4/vest/foo/bar/baz", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Equal(t, 404, recorder.Code)

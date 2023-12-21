@@ -1,9 +1,9 @@
 import {
   BlockTable, OrderFromDatabase, OrderTable, OrderStatus, dbHelpers, testConstants, testMocks,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import cancelStaleOrdersTask from '../../src/tasks/cancel-stale-orders';
-import { defaultOrderGoodTilBlockTime } from '@dydxprotocol-indexer/postgres/build/__tests__/helpers/constants';
-import { stats } from '@dydxprotocol-indexer/base';
+import { defaultOrderGoodTilBlockTime } from '@furyaprotocol-indexer/postgres/build/__tests__/helpers/constants';
+import { stats } from '@furyaprotocol-indexer/base';
 import _ from 'lodash';
 import config from '../../src/config';
 

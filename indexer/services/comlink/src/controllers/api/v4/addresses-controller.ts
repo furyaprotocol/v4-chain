@@ -1,4 +1,4 @@
-import { stats } from '@dydxprotocol-indexer/base';
+import { stats } from '@furyaprotocol-indexer/base';
 import {
   AssetPositionFromDatabase,
   BlockTable,
@@ -22,7 +22,7 @@ import {
   Options,
   FundingIndexUpdatesTable,
   FundingIndexMap,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import Big from 'big.js';
 import express from 'express';
 import {

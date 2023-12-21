@@ -3,7 +3,7 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/indexer_manager"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/indexer_manager"
 
 	"github.com/cometbft/cometbft/libs/log"
 
@@ -11,7 +11,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/assets/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/assets/types"
 )
 
 type (

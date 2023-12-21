@@ -6,9 +6,9 @@ import (
 	"time"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/dydxprotocol/v4-chain/protocol/testutil/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/epochs"
-	"github.com/dydxprotocol/v4-chain/protocol/x/epochs/types"
+	keepertest "github.com/furyanprotocol/v4-chain/protocol/testutil/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/epochs"
+	"github.com/furyanprotocol/v4-chain/protocol/x/epochs/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -7,19 +7,19 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	ibctransfertypes "github.com/cosmos/ibc-go/v7/modules/apps/transfer/types"
 
-	"github.com/dydxprotocol/v4-chain/protocol/app/config"
-	bridgemoduletypes "github.com/dydxprotocol/v4-chain/protocol/x/bridge/types"
-	clobmoduletypes "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	delaymsgtypes "github.com/dydxprotocol/v4-chain/protocol/x/delaymsg/types"
-	rewardsmoduletypes "github.com/dydxprotocol/v4-chain/protocol/x/rewards/types"
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
-	vestmoduletypes "github.com/dydxprotocol/v4-chain/protocol/x/vest/types"
+	"github.com/furyanprotocol/v4-chain/protocol/app/config"
+	bridgemoduletypes "github.com/furyanprotocol/v4-chain/protocol/x/bridge/types"
+	clobmoduletypes "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	delaymsgtypes "github.com/furyanprotocol/v4-chain/protocol/x/delaymsg/types"
+	rewardsmoduletypes "github.com/furyanprotocol/v4-chain/protocol/x/rewards/types"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
+	vestmoduletypes "github.com/furyanprotocol/v4-chain/protocol/x/vest/types"
 
 	"golang.org/x/exp/maps"
 )
 
 func init() {
-	// SetAddressPrefixes() explicitly in order to set the `dydx` address prefixes.
+	// SetAddressPrefixes() explicitly in order to set the `furya` address prefixes.
 	config.SetAddressPrefixes()
 }
 

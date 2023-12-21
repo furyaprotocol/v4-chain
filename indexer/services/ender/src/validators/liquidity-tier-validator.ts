@@ -1,5 +1,5 @@
-import { logger } from '@dydxprotocol-indexer/base';
-import { IndexerTendermintEvent, LiquidityTierUpsertEventV1 } from '@dydxprotocol-indexer/v4-protos';
+import { logger } from '@furyaprotocol-indexer/base';
+import { IndexerTendermintEvent, LiquidityTierUpsertEventV1 } from '@furyaprotocol-indexer/v4-protos';
 import Long from 'long';
 
 import { Handler } from '../handlers/handler';

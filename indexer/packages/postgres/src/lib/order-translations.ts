@@ -1,5 +1,5 @@
-import { logger } from '@dydxprotocol-indexer/base';
-import { IndexerOrder, IndexerOrder_Side } from '@dydxprotocol-indexer/v4-protos';
+import { logger } from '@furyaprotocol-indexer/base';
+import { IndexerOrder, IndexerOrder_Side } from '@furyaprotocol-indexer/v4-protos';
 import Long from 'long';
 
 import * as OrderTable from '../stores/order-table';

@@ -7,13 +7,13 @@ import {
   parseSchema,
   baseConfigSchema,
   parseBoolean,
-} from '@dydxprotocol-indexer/base';
+} from '@furyaprotocol-indexer/base';
 import {
   kafkaConfigSchema,
-} from '@dydxprotocol-indexer/kafka';
+} from '@furyaprotocol-indexer/kafka';
 import {
   redisConfigSchema,
-} from '@dydxprotocol-indexer/redis';
+} from '@furyaprotocol-indexer/redis';
 
 export const configSchema = {
   ...baseConfigSchema,

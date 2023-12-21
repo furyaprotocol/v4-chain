@@ -1,5 +1,5 @@
-import { logger } from '@dydxprotocol-indexer/base';
-import { redis } from '@dydxprotocol-indexer/redis';
+import { logger } from '@furyaprotocol-indexer/base';
+import { redis } from '@furyaprotocol-indexer/redis';
 import {
   assetRefresher,
   dbHelpers,
@@ -18,7 +18,7 @@ import {
   TendermintEventTable,
   testConstants,
   testMocks,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import { updateBlockCache } from '../../../src/caches/block-cache';
 import { defaultDeleveragingEvent, defaultPreviousHeight } from '../../helpers/constants';
 import { clearCandlesMap } from '../../../src/caches/candle-cache';
@@ -30,7 +30,7 @@ import {
   IndexerTendermintBlock,
   IndexerTendermintEvent,
   Timestamp,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import {
   createIndexerTendermintBlock,
   createIndexerTendermintEvent,
@@ -39,7 +39,7 @@ import {
   expectFillInDatabase,
   expectFillSubaccountKafkaMessageFromLiquidationEvent, expectPerpetualPosition,
 } from '../../helpers/indexer-proto-helpers';
-import { DydxIndexerSubtypes } from '../../../src/lib/types';
+import { FuryaIndexerSubtypes } from '../../../src/lib/types';
 import {
   MILLIS_IN_NANOS,
   SECONDS_IN_MILLIS,
@@ -50,8 +50,8 @@ import Long from 'long';
 import { DeleveragingHandler } from '../../../src/handlers/order-fills/deleveraging-handler';
 import { KafkaMessage } from 'kafkajs';
 import { onMessage } from '../../../src/lib/on-message';
-import { producer } from '@dydxprotocol-indexer/kafka';
-import { createdDateTime, createdHeight } from '@dydxprotocol-indexer/postgres/build/__tests__/helpers/constants';
+import { producer } from '@furyaprotocol-indexer/kafka';
+import { createdDateTime, createdHeight } from '@furyaprotocol-indexer/postgres/build/__tests__/helpers/constants';
 import Big from 'big.js';
 import { getWeightedAverage } from '../../../src/lib/helper';
 
@@ -129,7 +129,7 @@ describe('DeleveragingHandler', () => {
     const deleveragedSubaccountId: IndexerSubaccountId = defaultDeleveragingEvent.liquidated!;
 
     const indexerTendermintEvent: IndexerTendermintEvent = createIndexerTendermintEvent(
-      DydxIndexerSubtypes.DELEVERAGING,
+      FuryaIndexerSubtypes.DELEVERAGING,
       DeleveragingEventV1.encode(defaultDeleveragingEvent).finish(),
       transactionIndex,
       eventIndex,

@@ -1,15 +1,15 @@
-import { logger } from '@dydxprotocol-indexer/base';
+import { logger } from '@furyaprotocol-indexer/base';
 import {
   perpetualMarketRefresher,
   PROTO_TO_CANDLE_RESOLUTION,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import {
   CandleMessage,
   MarketMessage,
   OrderbookMessage,
   TradeMessage,
   SubaccountMessage, CandleMessage_Resolution,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import { KafkaMessage } from 'kafkajs';
 
 import { TOPIC_TO_CHANNEL, V4_MARKETS_ID } from '../lib/constants';

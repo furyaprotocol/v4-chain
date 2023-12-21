@@ -2,8 +2,8 @@ package v_3_0_0
 
 import (
 	store "github.com/cosmos/cosmos-sdk/store/types"
-	"github.com/dydxprotocol/v4-chain/protocol/app/upgrades"
-	ratelimittypes "github.com/dydxprotocol/v4-chain/protocol/x/ratelimit/types"
+	"github.com/furyanprotocol/v4-chain/protocol/app/upgrades"
+	ratelimittypes "github.com/furyanprotocol/v4-chain/protocol/x/ratelimit/types"
 )
 
 const (

@@ -1,10 +1,10 @@
-import { KafkaTopics } from '@dydxprotocol-indexer/kafka';
+import { KafkaTopics } from '@furyaprotocol-indexer/kafka';
 import {
   Liquidity,
   PerpetualPositionColumns,
   PerpetualPositionFromDatabase,
   SubaccountMessageContents,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import {
   StatefulOrderEventV1,
   IndexerTendermintEvent,
@@ -31,12 +31,12 @@ import {
   UpdatePerpetualEventV1,
   UpdateClobPairEventV1,
   DeleveragingEventV1,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import Long from 'long';
 
 // Type sourced from protocol:
-// https://github.com/dydxprotocol/v4-chain/blob/main/protocol/indexer/events/constants.go
-export enum DydxIndexerSubtypes {
+// https://github.com/furyanprotocol/v4-chain/blob/main/protocol/indexer/events/constants.go
+export enum FuryaIndexerSubtypes {
   ORDER_FILL = 'order_fill',
   SUBACCOUNT_UPDATE = 'subaccount_update',
   TRANSFER = 'transfer',
@@ -62,73 +62,73 @@ export type EventProtoWithTypeAndVersion = {
   version: number,
   blockEventIndex: number,
 } & ({
-  type: DydxIndexerSubtypes.ORDER_FILL,
+  type: FuryaIndexerSubtypes.ORDER_FILL,
   eventProto: OrderFillEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.SUBACCOUNT_UPDATE,
+  type: FuryaIndexerSubtypes.SUBACCOUNT_UPDATE,
   eventProto: SubaccountUpdateEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.TRANSFER,
+  type: FuryaIndexerSubtypes.TRANSFER,
   eventProto: TransferEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.MARKET,
+  type: FuryaIndexerSubtypes.MARKET,
   eventProto: MarketEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.STATEFUL_ORDER,
+  type: FuryaIndexerSubtypes.STATEFUL_ORDER,
   eventProto: StatefulOrderEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.FUNDING,
+  type: FuryaIndexerSubtypes.FUNDING,
   eventProto: FundingEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.ASSET,
+  type: FuryaIndexerSubtypes.ASSET,
   eventProto: AssetCreateEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.PERPETUAL_MARKET,
+  type: FuryaIndexerSubtypes.PERPETUAL_MARKET,
   eventProto: PerpetualMarketCreateEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.LIQUIDITY_TIER,
+  type: FuryaIndexerSubtypes.LIQUIDITY_TIER,
   eventProto: LiquidityTierUpsertEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.UPDATE_PERPETUAL,
+  type: FuryaIndexerSubtypes.UPDATE_PERPETUAL,
   eventProto: UpdatePerpetualEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.UPDATE_CLOB_PAIR,
+  type: FuryaIndexerSubtypes.UPDATE_CLOB_PAIR,
   eventProto: UpdateClobPairEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,
   blockEventIndex: number,
 } | {
-  type: DydxIndexerSubtypes.DELEVERAGING,
+  type: FuryaIndexerSubtypes.DELEVERAGING,
   eventProto: DeleveragingEventV1,
   indexerTendermintEvent: IndexerTendermintEvent,
   version: number,

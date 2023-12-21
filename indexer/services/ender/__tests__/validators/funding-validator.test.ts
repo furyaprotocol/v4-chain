@@ -1,12 +1,12 @@
-import { logger, ParseMessageError } from '@dydxprotocol-indexer/base';
+import { logger, ParseMessageError } from '@furyaprotocol-indexer/base';
 import {
   FundingEventV1,
   FundingEventV1_Type,
   IndexerTendermintBlock,
   IndexerTendermintEvent,
-} from '@dydxprotocol-indexer/v4-protos';
-import { dbHelpers, perpetualMarketRefresher, testMocks } from '@dydxprotocol-indexer/postgres';
-import { DydxIndexerSubtypes } from '../../src/lib/types';
+} from '@furyaprotocol-indexer/v4-protos';
+import { dbHelpers, perpetualMarketRefresher, testMocks } from '@furyaprotocol-indexer/postgres';
+import { FuryaIndexerSubtypes } from '../../src/lib/types';
 import { FundingValidator } from '../../src/validators/funding-validator';
 import {
   defaultFundingUpdateSampleEvent,
@@ -20,7 +20,7 @@ import {
   createIndexerTendermintEvent,
 } from '../helpers/indexer-proto-helpers';
 import { expectDidntLogError, expectLoggedParseMessageError } from '../helpers/validator-helpers';
-import { bigIntToBytes } from '@dydxprotocol-indexer/v4-proto-parser';
+import { bigIntToBytes } from '@furyaprotocol-indexer/v4-proto-parser';
 
 describe('funding-validator', () => {
   beforeEach(async () => {
@@ -101,7 +101,7 @@ function createBlock(
   fundingEvent: FundingEventV1,
 ): IndexerTendermintBlock {
   const event: IndexerTendermintEvent = createIndexerTendermintEvent(
-    DydxIndexerSubtypes.FUNDING,
+    FuryaIndexerSubtypes.FUNDING,
     FundingEventV1.encode(fundingEvent).finish(),
     0,
     0,

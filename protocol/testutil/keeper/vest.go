@@ -7,11 +7,11 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	blocktimekeeper "github.com/dydxprotocol/v4-chain/protocol/x/blocktime/keeper"
-	bridgetypes "github.com/dydxprotocol/v4-chain/protocol/x/bridge/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/vest/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/vest/types"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	blocktimekeeper "github.com/furyanprotocol/v4-chain/protocol/x/blocktime/keeper"
+	bridgetypes "github.com/furyanprotocol/v4-chain/protocol/x/bridge/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/vest/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/vest/types"
 
 	"testing"
 )

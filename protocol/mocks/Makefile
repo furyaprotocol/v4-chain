@@ -1,25 +1,25 @@
 GOPATH=$(shell go env GOPATH)
 
-COSMOS_VERSION=$(shell go list -m all | grep "github.com/dydxprotocol/cosmos-sdk" | awk '{print $$NF}')
-COMETBFT_VERSION=$(shell go list -m all | grep "github.com/dydxprotocol/cometbft" | awk '{print $$NF}')
+COSMOS_VERSION=$(shell go list -m all | grep "github.com/furyaprotocol/cosmos-sdk" | awk '{print $$NF}')
+COMETBFT_VERSION=$(shell go list -m all | grep "github.com/furyaprotocol/cometbft" | awk '{print $$NF}')
 COSMOS_GOGOPROTO_VERSION=$(shell go list -m all | grep "github.com/cosmos/gogoproto" | awk '{print $$NF}')
 
 mock-clean:
 	@rm -f ./mocks/*.go
 
 mock-gen:
-	@go run github.com/vektra/mockery/v2 --name=InterfaceRegistry --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cosmos-sdk@$(COSMOS_VERSION)/codec --recursive --output=./mocks
-	@go run github.com/vektra/mockery/v2 --name=Configurator --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cosmos-sdk@$(COSMOS_VERSION)/types --recursive --output=./mocks
-	@go run github.com/vektra/mockery/v2 --name=MultiStore --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cosmos-sdk@$(COSMOS_VERSION)/store/types --recursive --output=./mocks
-	@go run github.com/vektra/mockery/v2 --name=CacheMultiStore --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cosmos-sdk@$(COSMOS_VERSION)/store/types --recursive --output=./mocks
-	@go run github.com/vektra/mockery/v2 --name=AnteDecorator --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cosmos-sdk@$(COSMOS_VERSION)/types --recursive --output=./mocks
-	@go run github.com/vektra/mockery/v2 --name=TxConfig --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cosmos-sdk@$(COSMOS_VERSION)/client --recursive --output=./mocks
-	@go run github.com/vektra/mockery/v2 --name=Msg --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cosmos-sdk@$(COSMOS_VERSION)/types --recursive --output=./mocks
-	@go run github.com/vektra/mockery/v2 --name=TxBuilder --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cosmos-sdk@$(COSMOS_VERSION)/client --recursive --output=./mocks
-	@go run github.com/vektra/mockery/v2 --name=Keeper --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cosmos-sdk@$(COSMOS_VERSION)/x/bank/keeper --filename=BankKeeper.go --structname=BankKeeper --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=InterfaceRegistry --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cosmos-sdk@$(COSMOS_VERSION)/codec --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=Configurator --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cosmos-sdk@$(COSMOS_VERSION)/types --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=MultiStore --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cosmos-sdk@$(COSMOS_VERSION)/store/types --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=CacheMultiStore --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cosmos-sdk@$(COSMOS_VERSION)/store/types --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=AnteDecorator --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cosmos-sdk@$(COSMOS_VERSION)/types --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=TxConfig --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cosmos-sdk@$(COSMOS_VERSION)/client --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=Msg --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cosmos-sdk@$(COSMOS_VERSION)/types --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=TxBuilder --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cosmos-sdk@$(COSMOS_VERSION)/client --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=Keeper --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cosmos-sdk@$(COSMOS_VERSION)/x/bank/keeper --filename=BankKeeper.go --structname=BankKeeper --recursive --output=./mocks
 	@go run github.com/vektra/mockery/v2 --name=Server --dir=$(GOPATH)/pkg/mod/github.com/cosmos/gogoproto@$(COSMOS_GOGOPROTO_VERSION)/grpc --recursive --output=./mocks
-	@go run github.com/vektra/mockery/v2 --name=AppOptions --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cosmos-sdk@$(COSMOS_VERSION)/server/types --recursive --output=./mocks
-	@go run github.com/vektra/mockery/v2 --name=Logger --dir=$(GOPATH)/pkg/mod/github.com/dydxprotocol/cometbft@$(COMETBFT_VERSION)/libs/log --filename=logger.go --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=AppOptions --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cosmos-sdk@$(COSMOS_VERSION)/server/types --recursive --output=./mocks
+	@go run github.com/vektra/mockery/v2 --name=Logger --dir=$(GOPATH)/pkg/mod/github.com/furyaprotocol/cometbft@$(COMETBFT_VERSION)/libs/log --filename=logger.go --recursive --output=./mocks
 	@go run github.com/vektra/mockery/v2 --name=MsgRouter --dir=./lib --recursive --output=./mocks
 	@go run github.com/vektra/mockery/v2 --name=HealthCheckable --dir=./daemons/types --recursive --output=./mocks
 	@go run github.com/vektra/mockery/v2 --name=PrepareBridgeKeeper --dir=./app/prepare --recursive --output=./mocks

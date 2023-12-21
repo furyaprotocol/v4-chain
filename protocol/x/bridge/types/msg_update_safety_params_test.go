@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	"github.com/dydxprotocol/v4-chain/protocol/x/bridge/types"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/x/bridge/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -38,7 +38,7 @@ func TestMsgUpdateSafetyParams_ValidateBasic(t *testing.T) {
 		},
 		"Failure: invalid authority": {
 			msg: types.MsgUpdateSafetyParams{
-				Authority: "dydx1abc",
+				Authority: "furya1abc",
 			},
 			expectedErr: types.ErrInvalidAuthority.Error(),
 		},

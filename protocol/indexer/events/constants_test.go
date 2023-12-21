@@ -3,7 +3,7 @@ package events_test
 import (
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/events"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/events"
 	"github.com/stretchr/testify/require"
 )
 

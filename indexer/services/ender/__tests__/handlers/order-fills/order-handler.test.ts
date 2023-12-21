@@ -1,4 +1,4 @@
-import { logger } from '@dydxprotocol-indexer/base';
+import { logger } from '@furyaprotocol-indexer/base';
 import {
   IndexerOrder,
   IndexerOrder_Side,
@@ -12,8 +12,8 @@ import {
   OffChainUpdateV1,
   OrderRemovalReason,
   OrderRemoveV1_OrderRemovalStatus,
-} from '@dydxprotocol-indexer/v4-protos';
-import { redis, CanceledOrdersCache } from '@dydxprotocol-indexer/redis';
+} from '@furyaprotocol-indexer/v4-protos';
+import { redis, CanceledOrdersCache } from '@furyaprotocol-indexer/redis';
 import {
   assetRefresher,
   CandleFromDatabase,
@@ -38,7 +38,7 @@ import {
   testConstants,
   testMocks,
   TimeInForce,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import { KafkaMessage } from 'kafkajs';
 import { DateTime } from 'luxon';
 import {
@@ -47,7 +47,7 @@ import {
   STATEFUL_ORDER_ORDER_FILL_EVENT_TYPE,
   SUBACCOUNT_ORDER_FILL_EVENT_TYPE,
 } from '../../../src/constants';
-import { producer } from '@dydxprotocol-indexer/kafka';
+import { producer } from '@furyaprotocol-indexer/kafka';
 import { onMessage } from '../../../src/lib/on-message';
 import {
   createIndexerTendermintBlock,
@@ -63,12 +63,12 @@ import {
 } from '../../helpers/indexer-proto-helpers';
 import Big from 'big.js';
 import { getWeightedAverage } from '../../../src/lib/helper';
-import { ORDER_FLAG_LONG_TERM, ORDER_FLAG_SHORT_TERM } from '@dydxprotocol-indexer/v4-proto-parser';
+import { ORDER_FLAG_LONG_TERM, ORDER_FLAG_SHORT_TERM } from '@furyaprotocol-indexer/v4-proto-parser';
 import { updateBlockCache } from '../../../src/caches/block-cache';
 import {
   defaultOrder, defaultOrderEvent, defaultPreviousHeight, defaultTakerOrder,
 } from '../../helpers/constants';
-import { DydxIndexerSubtypes } from '../../../src/lib/types';
+import { FuryaIndexerSubtypes } from '../../../src/lib/types';
 import { OrderHandler } from '../../../src/handlers/order-fills/order-handler';
 import { clearCandlesMap } from '../../../src/caches/candle-cache';
 import Long from 'long';
@@ -166,7 +166,7 @@ describe('OrderHandler', () => {
       const eventIndex: number = 0;
 
       const indexerTendermintEvent: IndexerTendermintEvent = createIndexerTendermintEvent(
-        DydxIndexerSubtypes.ORDER_FILL,
+        FuryaIndexerSubtypes.ORDER_FILL,
         OrderFillEventV1.encode(defaultOrderEvent).finish(),
         transactionIndex,
         eventIndex,

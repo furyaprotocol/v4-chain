@@ -2,16 +2,16 @@ import {
   OrderTable,
   PerpetualMarketFromDatabase,
   protocolTranslations,
-} from '@dydxprotocol-indexer/postgres';
-import { subticksToPrice } from '@dydxprotocol-indexer/postgres/build/src/lib/protocol-translations';
-import { StateFilledQuantumsCache } from '@dydxprotocol-indexer/redis';
+} from '@furyaprotocol-indexer/postgres';
+import { subticksToPrice } from '@furyaprotocol-indexer/postgres/build/src/lib/protocol-translations';
+import { StateFilledQuantumsCache } from '@furyaprotocol-indexer/redis';
 import {
   IndexerOrder,
   IndexerOrder_ConditionType,
   IndexerOrder_Side,
   RedisOrder,
   RedisOrder_TickerType,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import Big from 'big.js';
 
 import { redisClient } from '../helpers/redis/redis-controller';

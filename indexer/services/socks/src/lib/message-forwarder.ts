@@ -3,8 +3,8 @@ import {
   logger,
   InfoObject,
   safeJsonStringify,
-} from '@dydxprotocol-indexer/base';
-import { addOnMessageFunction } from '@dydxprotocol-indexer/kafka';
+} from '@furyaprotocol-indexer/base';
+import { addOnMessageFunction } from '@furyaprotocol-indexer/kafka';
 import { KafkaMessage } from 'kafkajs';
 import _ from 'lodash';
 

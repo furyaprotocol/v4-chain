@@ -1,7 +1,7 @@
 package app
 
 const (
-	AppName       = "dydxprotocol"
+	AppName       = "furyaprotocol"
 	AppDaemonName = AppName + "d"
 	ServiceName   = "validator"
 )

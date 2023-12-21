@@ -16,11 +16,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/tx"
 	bank_keeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
-	bridge_servertypes "github.com/dydxprotocol/v4-chain/protocol/daemons/server/types/bridge"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/bridge"
-	bridge_keeper "github.com/dydxprotocol/v4-chain/protocol/x/bridge/keeper"
+	bridge_servertypes "github.com/furyanprotocol/v4-chain/protocol/daemons/server/types/bridge"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/bridge"
+	bridge_keeper "github.com/furyanprotocol/v4-chain/protocol/x/bridge/keeper"
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/stretchr/testify/mock"
@@ -191,35 +191,35 @@ func TestAppModuleBasic_RegisterGRPCGatewayRoutes(t *testing.T) {
 
 	// Expect EventParams route registered
 	recorder := httptest.NewRecorder()
-	req, err := http.NewRequest("GET", "/dydxprotocol/v4/bridge/event_params", nil)
+	req, err := http.NewRequest("GET", "/furyaprotocol/v4/bridge/event_params", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")
 
 	// Expect ProposeParams route registered
 	recorder = httptest.NewRecorder()
-	req, err = http.NewRequest("GET", "/dydxprotocol/v4/bridge/propose_params", nil)
+	req, err = http.NewRequest("GET", "/furyaprotocol/v4/bridge/propose_params", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")
 
 	// Expect SafetyParams route registered
 	recorder = httptest.NewRecorder()
-	req, err = http.NewRequest("GET", "/dydxprotocol/v4/bridge/safety_params", nil)
+	req, err = http.NewRequest("GET", "/furyaprotocol/v4/bridge/safety_params", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")
 
 	// Expect AcknowledgedEventInfo route registered
 	recorder = httptest.NewRecorder()
-	req, err = http.NewRequest("GET", "/dydxprotocol/v4/bridge/acknowledged_event_info", nil)
+	req, err = http.NewRequest("GET", "/furyaprotocol/v4/bridge/acknowledged_event_info", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")
 
 	// Expect RecognizedEventInfo route registered
 	recorder = httptest.NewRecorder()
-	req, err = http.NewRequest("GET", "/dydxprotocol/v4/bridge/recognized_event_info", nil)
+	req, err = http.NewRequest("GET", "/furyaprotocol/v4/bridge/recognized_event_info", nil)
 	require.NoError(t, err)
 	router.ServeHTTP(recorder, req)
 	require.Contains(t, recorder.Body.String(), "no RPC client is defined in offline mode")

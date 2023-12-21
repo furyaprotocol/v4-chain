@@ -1,8 +1,8 @@
 import {
   PerpetualMarketFromDatabase, PerpetualMarketModel,
   perpetualMarketRefresher,
-} from '@dydxprotocol-indexer/postgres';
-import { PerpetualMarketCreateEventV1 } from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/postgres';
+import { PerpetualMarketCreateEventV1 } from '@furyaprotocol-indexer/v4-protos';
 import * as pg from 'pg';
 
 import { generatePerpetualMarketMessage } from '../helpers/kafka-helper';

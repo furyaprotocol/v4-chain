@@ -1,8 +1,8 @@
 package lib_test
 
 import (
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	testApp "github.com/dydxprotocol/v4-chain/protocol/testutil/app"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	testApp "github.com/furyanprotocol/v4-chain/protocol/testutil/app"
 	"github.com/stretchr/testify/require"
 	"testing"
 )

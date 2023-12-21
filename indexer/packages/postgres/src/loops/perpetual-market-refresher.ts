@@ -1,4 +1,4 @@
-import { stats, delay, NodeEnv } from '@dydxprotocol-indexer/base';
+import { stats, delay, NodeEnv } from '@furyaprotocol-indexer/base';
 import _ from 'lodash';
 
 import config from '../config';

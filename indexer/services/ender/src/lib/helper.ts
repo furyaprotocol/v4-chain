@@ -1,10 +1,10 @@
-import { logger, ParseMessageError } from '@dydxprotocol-indexer/base';
+import { logger, ParseMessageError } from '@furyaprotocol-indexer/base';
 import {
   OrderSide,
   PerpetualMarketFromDatabase,
   PositionSide,
   protocolTranslations,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import {
   IndexerTendermintEvent,
   IndexerTendermintEvent_BlockEvent,
@@ -23,7 +23,7 @@ import {
   UpdateClobPairEventV1,
   SubaccountMessage,
   DeleveragingEventV1,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import Big from 'big.js';
 import _ from 'lodash';
 import { DateTime } from 'luxon';
@@ -34,7 +34,7 @@ import {
 } from '../constants';
 import {
   AnnotatedSubaccountMessage,
-  DydxIndexerSubtypes,
+  FuryaIndexerSubtypes,
   EventProtoWithTypeAndVersion,
 } from './types';
 
@@ -99,108 +99,108 @@ export function indexerTendermintEventToEventProtoWithType(
   // set the default version to 1
   const version: number = event.version === 0 ? 1 : event.version;
   switch (event.subtype) {
-    case (DydxIndexerSubtypes.ORDER_FILL.toString()): {
+    case (FuryaIndexerSubtypes.ORDER_FILL.toString()): {
       return {
-        type: DydxIndexerSubtypes.ORDER_FILL,
+        type: FuryaIndexerSubtypes.ORDER_FILL,
         eventProto: OrderFillEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.SUBACCOUNT_UPDATE.toString()): {
+    case (FuryaIndexerSubtypes.SUBACCOUNT_UPDATE.toString()): {
       return {
-        type: DydxIndexerSubtypes.SUBACCOUNT_UPDATE,
+        type: FuryaIndexerSubtypes.SUBACCOUNT_UPDATE,
         eventProto: SubaccountUpdateEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.TRANSFER.toString()): {
+    case (FuryaIndexerSubtypes.TRANSFER.toString()): {
       return {
-        type: DydxIndexerSubtypes.TRANSFER,
+        type: FuryaIndexerSubtypes.TRANSFER,
         eventProto: TransferEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.MARKET.toString()): {
+    case (FuryaIndexerSubtypes.MARKET.toString()): {
       return {
-        type: DydxIndexerSubtypes.MARKET,
+        type: FuryaIndexerSubtypes.MARKET,
         eventProto: MarketEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.STATEFUL_ORDER.toString()): {
+    case (FuryaIndexerSubtypes.STATEFUL_ORDER.toString()): {
       return {
-        type: DydxIndexerSubtypes.STATEFUL_ORDER,
+        type: FuryaIndexerSubtypes.STATEFUL_ORDER,
         eventProto: StatefulOrderEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.FUNDING.toString()): {
+    case (FuryaIndexerSubtypes.FUNDING.toString()): {
       return {
-        type: DydxIndexerSubtypes.FUNDING,
+        type: FuryaIndexerSubtypes.FUNDING,
         eventProto: FundingEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.ASSET.toString()): {
+    case (FuryaIndexerSubtypes.ASSET.toString()): {
       return {
-        type: DydxIndexerSubtypes.ASSET,
+        type: FuryaIndexerSubtypes.ASSET,
         eventProto: AssetCreateEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.PERPETUAL_MARKET.toString()): {
+    case (FuryaIndexerSubtypes.PERPETUAL_MARKET.toString()): {
       return {
-        type: DydxIndexerSubtypes.PERPETUAL_MARKET,
+        type: FuryaIndexerSubtypes.PERPETUAL_MARKET,
         eventProto: PerpetualMarketCreateEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.LIQUIDITY_TIER.toString()): {
+    case (FuryaIndexerSubtypes.LIQUIDITY_TIER.toString()): {
       return {
-        type: DydxIndexerSubtypes.LIQUIDITY_TIER,
+        type: FuryaIndexerSubtypes.LIQUIDITY_TIER,
         eventProto: LiquidityTierUpsertEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.UPDATE_PERPETUAL.toString()): {
+    case (FuryaIndexerSubtypes.UPDATE_PERPETUAL.toString()): {
       return {
-        type: DydxIndexerSubtypes.UPDATE_PERPETUAL,
+        type: FuryaIndexerSubtypes.UPDATE_PERPETUAL,
         eventProto: UpdatePerpetualEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.UPDATE_CLOB_PAIR.toString()): {
+    case (FuryaIndexerSubtypes.UPDATE_CLOB_PAIR.toString()): {
       return {
-        type: DydxIndexerSubtypes.UPDATE_CLOB_PAIR,
+        type: FuryaIndexerSubtypes.UPDATE_CLOB_PAIR,
         eventProto: UpdateClobPairEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,
         blockEventIndex,
       };
     }
-    case (DydxIndexerSubtypes.DELEVERAGING.toString()): {
+    case (FuryaIndexerSubtypes.DELEVERAGING.toString()): {
       return {
-        type: DydxIndexerSubtypes.DELEVERAGING,
+        type: FuryaIndexerSubtypes.DELEVERAGING,
         eventProto: DeleveragingEventV1.decode(eventDataBinary),
         indexerTendermintEvent: event,
         version,

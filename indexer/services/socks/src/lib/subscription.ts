@@ -2,9 +2,9 @@ import {
   AxiosSafeServerError,
   logger,
   stats,
-} from '@dydxprotocol-indexer/base';
-import { isRestrictedCountry } from '@dydxprotocol-indexer/compliance';
-import { CandleResolution, perpetualMarketRefresher } from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/base';
+import { isRestrictedCountry } from '@furyaprotocol-indexer/compliance';
+import { CandleResolution, perpetualMarketRefresher } from '@furyaprotocol-indexer/postgres';
 import WebSocket from 'ws';
 
 import config from '../config';

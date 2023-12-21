@@ -6,7 +6,7 @@ import (
 	errorsmod "cosmossdk.io/errors"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
 )
 
 // UpdateBlockRateLimitConfiguration updates the equity tier limit configuration returning an error

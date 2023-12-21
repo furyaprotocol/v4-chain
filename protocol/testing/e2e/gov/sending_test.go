@@ -1,7 +1,7 @@
 package gov_test
 
 import (
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
 	"testing"
 
 	"github.com/cometbft/cometbft/types"
@@ -9,10 +9,10 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	govtypesv1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
-	testapp "github.com/dydxprotocol/v4-chain/protocol/testutil/app"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	sendingtypes "github.com/dydxprotocol/v4-chain/protocol/x/sending/types"
-	vesttypes "github.com/dydxprotocol/v4-chain/protocol/x/vest/types"
+	testapp "github.com/furyanprotocol/v4-chain/protocol/testutil/app"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	sendingtypes "github.com/furyanprotocol/v4-chain/protocol/x/sending/types"
+	vesttypes "github.com/furyanprotocol/v4-chain/protocol/x/vest/types"
 	"github.com/stretchr/testify/require"
 )
 

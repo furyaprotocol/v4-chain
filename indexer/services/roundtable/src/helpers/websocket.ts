@@ -2,8 +2,8 @@ import {
   logger,
   stats,
   wrapBackgroundTask,
-} from '@dydxprotocol-indexer/base';
-import { MARKETS_WEBSOCKET_MESSAGE_VERSION, producer, WebsocketTopics } from '@dydxprotocol-indexer/kafka';
+} from '@furyaprotocol-indexer/base';
+import { MARKETS_WEBSOCKET_MESSAGE_VERSION, producer, WebsocketTopics } from '@furyaprotocol-indexer/kafka';
 import {
   LiquidityTiersFromDatabase,
   LiquidityTiersMap,
@@ -12,14 +12,14 @@ import {
   PerpetualMarketsMap,
   TradingMarketMessageContents,
   helpers,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import {
   MarketMessage,
   OffChainUpdateV1,
   IndexerOrderId,
   OrderRemovalReason,
   OrderRemoveV1_OrderRemovalStatus,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import _ from 'lodash';
 
 import config from '../config';

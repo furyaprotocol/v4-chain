@@ -4,8 +4,8 @@ import {
   SubaccountMessageContents,
   TransferFromDatabase,
   TransferModel,
-} from '@dydxprotocol-indexer/postgres';
-import { TransferEventV1 } from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/postgres';
+import { TransferEventV1 } from '@furyaprotocol-indexer/v4-protos';
 import * as pg from 'pg';
 
 import { generateTransferContents } from '../helpers/kafka-helper';

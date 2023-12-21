@@ -3,7 +3,7 @@ import {
   IndexerTendermintEvent,
   LiquidityTierUpsertEventV1,
   Timestamp,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import {
   BlockTable,
   dbHelpers,
@@ -20,11 +20,11 @@ import {
   perpetualMarketRefresher,
   PerpetualMarketTable,
   MarketTable,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import { KafkaMessage } from 'kafkajs';
-import { createKafkaMessage, producer } from '@dydxprotocol-indexer/kafka';
+import { createKafkaMessage, producer } from '@furyaprotocol-indexer/kafka';
 import { onMessage } from '../../src/lib/on-message';
-import { DydxIndexerSubtypes } from '../../src/lib/types';
+import { FuryaIndexerSubtypes } from '../../src/lib/types';
 import {
   createIndexerTendermintBlock,
   createIndexerTendermintEvent,
@@ -35,7 +35,7 @@ import {
   defaultHeight, defaultLiquidityTierUpsertEvent, defaultPreviousHeight, defaultTime, defaultTxHash,
 } from '../helpers/constants';
 import { updateBlockCache } from '../../src/caches/block-cache';
-import { defaultLiquidityTier } from '@dydxprotocol-indexer/postgres/build/__tests__/helpers/constants';
+import { defaultLiquidityTier } from '@furyaprotocol-indexer/postgres/build/__tests__/helpers/constants';
 import _ from 'lodash';
 import { createPostgresFunctions } from '../../src/helpers/postgres/postgres-functions';
 
@@ -76,7 +76,7 @@ describe('liquidityTierHandler', () => {
       const eventIndex: number = 0;
 
       const indexerTendermintEvent: IndexerTendermintEvent = createIndexerTendermintEvent(
-        DydxIndexerSubtypes.LIQUIDITY_TIER,
+        FuryaIndexerSubtypes.LIQUIDITY_TIER,
         LiquidityTierUpsertEventV1.encode(defaultLiquidityTierUpsertEvent).finish(),
         transactionIndex,
         eventIndex,
@@ -199,7 +199,7 @@ function createKafkaMessageFromLiquidityTiersEvent({
   const events: IndexerTendermintEvent[] = [];
   events.push(
     createIndexerTendermintEvent(
-      DydxIndexerSubtypes.LIQUIDITY_TIER,
+      FuryaIndexerSubtypes.LIQUIDITY_TIER,
       LiquidityTierUpsertEventV1.encode(liquidityTierEvent).finish(),
       transactionIndex,
       0,

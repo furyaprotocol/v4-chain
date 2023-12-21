@@ -1,10 +1,10 @@
-<p align="center"><img src="https://dydx.exchange/icon.svg?" width="256" /></p>
+<p align="center"><img src="https://furya.exchange/icon.svg?" width="256" /></p>
 
 <h1 align="center">dYdX Chain Proto</h1>
 
 <div align="center">
-  <a href="https://github.com/dydxprotocol/v4-chain/actions/workflows/proto.yml?query=branch%3Amain" style="text-decoration:none;">
-    <img src="https://github.com/dydxprotocol/v4-chain/actions/workflows/proto.yml/badge.svg?branch=main" />
+  <a href="https://github.com/furyanprotocol/v4-chain/actions/workflows/proto.yml?query=branch%3Amain" style="text-decoration:none;">
+    <img src="https://github.com/furyanprotocol/v4-chain/actions/workflows/proto.yml/badge.svg?branch=main" />
   </a>
 </div>
 

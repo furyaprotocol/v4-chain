@@ -1,4 +1,4 @@
-import { logger } from '@dydxprotocol-indexer/base';
+import { logger } from '@furyaprotocol-indexer/base';
 import {
   FillFromDatabase,
   FillModel,
@@ -8,8 +8,8 @@ import {
   PerpetualPositionFromDatabase,
   PerpetualPositionModel,
   SubaccountTable,
-} from '@dydxprotocol-indexer/postgres';
-import { DeleveragingEventV1 } from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/postgres';
+import { DeleveragingEventV1 } from '@furyaprotocol-indexer/v4-protos';
 import * as pg from 'pg';
 
 import { SUBACCOUNT_ORDER_FILL_EVENT_TYPE } from '../../constants';

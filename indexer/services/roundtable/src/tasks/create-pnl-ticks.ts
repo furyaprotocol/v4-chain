@@ -1,12 +1,12 @@
-import { logger, stats } from '@dydxprotocol-indexer/base';
+import { logger, stats } from '@furyaprotocol-indexer/base';
 import {
   BlockFromDatabase,
   BlockTable,
   PnlTicksCreateObject,
   PnlTicksTable,
   Transaction,
-} from '@dydxprotocol-indexer/postgres';
-import { LatestAccountPnlTicksCache } from '@dydxprotocol-indexer/redis';
+} from '@furyaprotocol-indexer/postgres';
+import { LatestAccountPnlTicksCache } from '@furyaprotocol-indexer/redis';
 import _ from 'lodash';
 import { DateTime } from 'luxon';
 

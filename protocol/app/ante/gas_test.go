@@ -4,8 +4,8 @@ import (
 	"cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"
 	bank "github.com/cosmos/cosmos-sdk/x/bank/types"
-	testapp "github.com/dydxprotocol/v4-chain/protocol/testutil/app"
-	assets "github.com/dydxprotocol/v4-chain/protocol/x/assets/types"
+	testapp "github.com/furyanprotocol/v4-chain/protocol/testutil/app"
+	assets "github.com/furyanprotocol/v4-chain/protocol/x/assets/types"
 	"reflect"
 	"testing"
 
@@ -14,10 +14,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	"github.com/dydxprotocol/v4-chain/protocol/app/ante"
-	testante "github.com/dydxprotocol/v4-chain/protocol/testutil/ante"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	pricestypes "github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
+	"github.com/furyanprotocol/v4-chain/protocol/app/ante"
+	testante "github.com/furyanprotocol/v4-chain/protocol/testutil/ante"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	pricestypes "github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
 
 	"github.com/stretchr/testify/require"
 )

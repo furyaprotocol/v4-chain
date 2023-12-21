@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/constants"
 
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/spf13/cobra"
@@ -16,9 +16,9 @@ import (
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/dydxprotocol/v4-chain/protocol/x/rewards/client/cli"
-	"github.com/dydxprotocol/v4-chain/protocol/x/rewards/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/rewards/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/rewards/client/cli"
+	"github.com/furyanprotocol/v4-chain/protocol/x/rewards/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/rewards/types"
 )
 
 var (

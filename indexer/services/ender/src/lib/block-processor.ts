@@ -1,12 +1,12 @@
 /* eslint-disable max-len */
-import { logger, stats, STATS_NO_SAMPLING } from '@dydxprotocol-indexer/base';
+import { logger, stats, STATS_NO_SAMPLING } from '@furyaprotocol-indexer/base';
 import {
   storeHelpers,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import {
   IndexerTendermintBlock,
   IndexerTendermintEvent,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import _ from 'lodash';
 import * as pg from 'pg';
 import { DatabaseError } from 'pg';
@@ -31,25 +31,25 @@ import { indexerTendermintEventToEventProtoWithType, indexerTendermintEventToTra
 import { KafkaPublisher } from './kafka-publisher';
 import { SyncHandlers, SYNCHRONOUS_SUBTYPES } from './sync-handlers';
 import {
-  DydxIndexerSubtypes, EventMessage, EventProtoWithTypeAndVersion, GroupedEvents,
+  FuryaIndexerSubtypes, EventMessage, EventProtoWithTypeAndVersion, GroupedEvents,
 } from './types';
 
 const TXN_EVENT_SUBTYPE_VERSION_TO_VALIDATOR_MAPPING: Record<string, ValidatorInitializer> = {
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.ORDER_FILL.toString(), 1)]: OrderFillValidator,
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.SUBACCOUNT_UPDATE.toString(), 1)]: SubaccountUpdateValidator,
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.TRANSFER.toString(), 1)]: TransferValidator,
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.MARKET.toString(), 1)]: MarketValidator,
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.STATEFUL_ORDER.toString(), 1)]: StatefulOrderValidator,
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.ASSET.toString(), 1)]: AssetValidator,
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.PERPETUAL_MARKET.toString(), 1)]: PerpetualMarketValidator,
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.LIQUIDITY_TIER.toString(), 1)]: LiquidityTierValidator,
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.UPDATE_PERPETUAL.toString(), 1)]: UpdatePerpetualValidator,
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.UPDATE_CLOB_PAIR.toString(), 1)]: UpdateClobPairValidator,
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.DELEVERAGING.toString(), 1)]: DeleveragingValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.ORDER_FILL.toString(), 1)]: OrderFillValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.SUBACCOUNT_UPDATE.toString(), 1)]: SubaccountUpdateValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.TRANSFER.toString(), 1)]: TransferValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.MARKET.toString(), 1)]: MarketValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.STATEFUL_ORDER.toString(), 1)]: StatefulOrderValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.ASSET.toString(), 1)]: AssetValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.PERPETUAL_MARKET.toString(), 1)]: PerpetualMarketValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.LIQUIDITY_TIER.toString(), 1)]: LiquidityTierValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.UPDATE_PERPETUAL.toString(), 1)]: UpdatePerpetualValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.UPDATE_CLOB_PAIR.toString(), 1)]: UpdateClobPairValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.DELEVERAGING.toString(), 1)]: DeleveragingValidator,
 };
 
 const BLOCK_EVENT_SUBTYPE_VERSION_TO_VALIDATOR_MAPPING: Record<string, ValidatorInitializer> = {
-  [serializeSubtypeAndVersion(DydxIndexerSubtypes.FUNDING.toString(), 1)]: FundingValidator,
+  [serializeSubtypeAndVersion(FuryaIndexerSubtypes.FUNDING.toString(), 1)]: FundingValidator,
 };
 
 function serializeSubtypeAndVersion(
@@ -207,7 +207,7 @@ export class BlockProcessor {
     );
 
     _.map(handlers, (handler: Handler<EventMessage>) => {
-      if (SYNCHRONOUS_SUBTYPES.includes(eventProto.type as DydxIndexerSubtypes)) {
+      if (SYNCHRONOUS_SUBTYPES.includes(eventProto.type as FuryaIndexerSubtypes)) {
         this.syncHandlers.addHandler(eventProto.type, handler);
       } else {
         this.batchedHandlers.addHandler(handler);
@@ -236,11 +236,11 @@ export class BlockProcessor {
     let resultRow: pg.QueryResultRow;
     try {
       const result: pg.QueryResult = await storeHelpers.rawQuery(
-        'SELECT dydx_block_processor(?) AS result;',
+        'SELECT furya_block_processor(?) AS result;',
         {
           txId: this.txId,
           bindings: [JSON.stringify(this.sqlBlock)],
-          sqlOptions: { name: 'dydx_block_processor' },
+          sqlOptions: { name: 'furya_block_processor' },
         },
       ).catch((error: DatabaseError) => {
         logger.crit({

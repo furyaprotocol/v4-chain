@@ -7,13 +7,13 @@ import (
 	"fmt"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/app"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	clobtest "github.com/dydxprotocol/v4-chain/protocol/testutil/clob"
-	perptest "github.com/dydxprotocol/v4-chain/protocol/testutil/perpetuals"
-	pricestest "github.com/dydxprotocol/v4-chain/protocol/testutil/prices"
-	clobtypes "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	pricestypes "github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
+	"github.com/furyanprotocol/v4-chain/protocol/app"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	clobtest "github.com/furyanprotocol/v4-chain/protocol/testutil/clob"
+	perptest "github.com/furyanprotocol/v4-chain/protocol/testutil/perpetuals"
+	pricestest "github.com/furyanprotocol/v4-chain/protocol/testutil/prices"
+	clobtypes "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	pricestypes "github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
 )
 
 // Subsitute quantums and subticks with value converted from human readable price and amount.

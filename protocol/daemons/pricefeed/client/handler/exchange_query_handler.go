@@ -4,19 +4,19 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	daemontypes "github.com/dydxprotocol/v4-chain/protocol/daemons/types"
+	daemontypes "github.com/furyanprotocol/v4-chain/protocol/daemons/types"
 	"strings"
 	"time"
 
 	gometrics "github.com/armon/go-metrics"
 	"github.com/cosmos/cosmos-sdk/telemetry"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/constants"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/price_function"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/types"
-	pricefeedmetrics "github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/metrics"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
-	libtime "github.com/dydxprotocol/v4-chain/protocol/lib/time"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/price_function"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/types"
+	pricefeedmetrics "github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
+	libtime "github.com/furyanprotocol/v4-chain/protocol/lib/time"
 )
 
 // ExchangeQueryHandlerImpl is the struct that implements the `ExchangeQueryHandler` interface.

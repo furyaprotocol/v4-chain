@@ -1,4 +1,4 @@
-import { PnlTicksCreateObject } from '@dydxprotocol-indexer/postgres';
+import { PnlTicksCreateObject } from '@furyaprotocol-indexer/postgres';
 import _ from 'lodash';
 import { RedisClient } from 'redis';
 

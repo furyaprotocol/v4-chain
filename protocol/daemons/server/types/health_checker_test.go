@@ -1,8 +1,8 @@
 package types_test
 
 import (
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/server/types"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/server/types"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
 	"github.com/stretchr/testify/require"
 	"testing"
 	"time"

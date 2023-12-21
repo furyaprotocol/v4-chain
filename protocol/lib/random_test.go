@@ -2,7 +2,7 @@ package lib_test
 
 import (
 	"bytes"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
 	"math/rand"
 	"testing"
 

@@ -2,7 +2,7 @@
 # `docker buildx imagetools inspect golang:1.21-alpine`
 ARG GOLANG_1_21_ALPINE_DIGEST="926f7f7e1ab8509b4e91d5ec6d5916ebb45155b0c8920291ba9f361d65385806"
 
-# This Dockerfile is a stateless build of the `dydxprotocold` binary as a Docker container.
+# This Dockerfile is a stateless build of the `furyaprotocold` binary as a Docker container.
 # It does not include any configuration, state, or genesis information.
 
 # --------------------------------------------------------
@@ -16,7 +16,7 @@ ARG COMMIT
 RUN set -eux; apk add --no-cache ca-certificates build-base; apk add git linux-headers bash
 
 # Download go dependencies
-WORKDIR /dydxprotocol
+WORKDIR /furyaprotocol
 COPY go.* ./
 RUN --mount=type=cache,target=/root/.cache/go-build \
     --mount=type=cache,target=/root/go/pkg/mod \
@@ -25,20 +25,20 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
 # Copy the remaining files
 COPY . .
 
-# Build dydxprotocold binary
+# Build furyaprotocold binary
 RUN --mount=type=cache,target=/root/.cache/go-build \
     --mount=type=cache,target=/root/go/pkg/mod \
     go build \
       -mod=readonly \
       -tags "netgo,ledger,muslc" \
-      -ldflags "-X github.com/cosmos/cosmos-sdk/version.Name="dydxprotocol" \
-              -X github.com/cosmos/cosmos-sdk/version.AppName="dydxprotocold" \
+      -ldflags "-X github.com/cosmos/cosmos-sdk/version.Name="furyaprotocol" \
+              -X github.com/cosmos/cosmos-sdk/version.AppName="furyaprotocold" \
               -X github.com/cosmos/cosmos-sdk/version.Version=$VERSION \
               -X github.com/cosmos/cosmos-sdk/version.Commit=$COMMIT \
               -X github.com/cosmos/cosmos-sdk/version.BuildTags='netgo,ledger,muslc' \
               -w -s -linkmode=external -extldflags '-Wl,-z,muldefs -static'" \
       -trimpath \
-      -o /dydxprotocol/build/ \
+      -o /furyaprotocol/build/ \
       ./...
 
 # --------------------------------------------------------
@@ -49,9 +49,9 @@ FROM golang@sha256:${GOLANG_1_21_ALPINE_DIGEST}
 
 RUN apk add --no-cache bash
 
-COPY --from=builder /dydxprotocol/build/dydxprotocold /bin/dydxprotocold
+COPY --from=builder /furyaprotocol/build/furyaprotocold /bin/furyaprotocold
 
-ENV HOME /dydxprotocol
+ENV HOME /furyaprotocol
 WORKDIR $HOME
 
 # tendermint p2p
@@ -63,4 +63,4 @@ EXPOSE 1317
 # grpc
 EXPOSE 9090
 
-ENTRYPOINT ["dydxprotocold"]
+ENTRYPOINT ["furyaprotocold"]

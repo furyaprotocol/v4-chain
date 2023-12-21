@@ -2,7 +2,7 @@ package ante
 
 import (
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
 )
 
 var _ sdktypes.AnteDecorator = (*ClobRateLimitDecorator)(nil)

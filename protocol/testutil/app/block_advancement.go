@@ -6,9 +6,9 @@ import (
 
 	abcitypes "github.com/cometbft/cometbft/abci/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/app"
-	testtx "github.com/dydxprotocol/v4-chain/protocol/testutil/tx"
-	clobtypes "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
+	"github.com/furyanprotocol/v4-chain/protocol/app"
+	testtx "github.com/furyanprotocol/v4-chain/protocol/testutil/tx"
+	clobtypes "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
 	"github.com/stretchr/testify/require"
 )
 

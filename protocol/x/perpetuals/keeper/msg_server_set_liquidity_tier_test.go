@@ -3,14 +3,14 @@ package keeper_test
 import (
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	keepertest "github.com/dydxprotocol/v4-chain/protocol/testutil/keeper"
-	lttest "github.com/dydxprotocol/v4-chain/protocol/testutil/liquidity_tier"
-	perpkeeper "github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/types"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	keepertest "github.com/furyanprotocol/v4-chain/protocol/testutil/keeper"
+	lttest "github.com/furyanprotocol/v4-chain/protocol/testutil/liquidity_tier"
+	perpkeeper "github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/types"
 	"github.com/stretchr/testify/require"
 )
 

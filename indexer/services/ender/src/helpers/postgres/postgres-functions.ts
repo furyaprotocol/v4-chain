@@ -1,8 +1,8 @@
 import { readFileSync } from 'fs';
 import path from 'path';
 
-import { logger } from '@dydxprotocol-indexer/base';
-import { dbHelpers, storeHelpers } from '@dydxprotocol-indexer/postgres';
+import { logger } from '@furyaprotocol-indexer/base';
+import { dbHelpers, storeHelpers } from '@furyaprotocol-indexer/postgres';
 
 export type PostgresFunction = {
   // The name of the script
@@ -27,21 +27,21 @@ function newScript(name: string, scriptPath: string): PostgresFunction {
 }
 
 const HANDLER_SCRIPTS: string[] = [
-  'dydx_asset_create_handler.sql',
-  'dydx_block_processor_ordered_handlers.sql',
-  'dydx_block_processor_unordered_handlers.sql',
-  'dydx_deleveraging_handler.sql',
-  'dydx_funding_handler.sql',
-  'dydx_liquidity_tier_handler.sql',
-  'dydx_market_create_handler.sql',
-  'dydx_market_modify_handler.sql',
-  'dydx_market_price_update_handler.sql',
-  'dydx_perpetual_market_handler.sql',
-  'dydx_stateful_order_handler.sql',
-  'dydx_subaccount_update_handler.sql',
-  'dydx_transfer_handler.sql',
-  'dydx_update_clob_pair_handler.sql',
-  'dydx_update_perpetual_handler.sql',
+  'furya_asset_create_handler.sql',
+  'furya_block_processor_ordered_handlers.sql',
+  'furya_block_processor_unordered_handlers.sql',
+  'furya_deleveraging_handler.sql',
+  'furya_funding_handler.sql',
+  'furya_liquidity_tier_handler.sql',
+  'furya_market_create_handler.sql',
+  'furya_market_modify_handler.sql',
+  'furya_market_price_update_handler.sql',
+  'furya_perpetual_market_handler.sql',
+  'furya_stateful_order_handler.sql',
+  'furya_subaccount_update_handler.sql',
+  'furya_transfer_handler.sql',
+  'furya_update_clob_pair_handler.sql',
+  'furya_update_perpetual_handler.sql',
 ];
 
 const DB_SETUP_SCRIPTS: string[] = [
@@ -50,43 +50,43 @@ const DB_SETUP_SCRIPTS: string[] = [
 ];
 
 const HELPER_SCRIPTS: string[] = [
-  'dydx_clob_pair_status_to_market_status.sql',
-  'dydx_create_initial_rows_for_tendermint_block.sql',
-  'dydx_create_tendermint_event.sql',
-  'dydx_create_transaction.sql',
-  'dydx_event_id_from_parts.sql',
-  'dydx_from_jsonlib_long.sql',
-  'dydx_from_protocol_order_side.sql',
-  'dydx_from_protocol_time_in_force.sql',
-  'dydx_from_serializable_int.sql',
-  'dydx_get_fee_from_liquidity.sql',
-  'dydx_get_order_status.sql',
-  'dydx_get_perpetual_market_for_clob_pair.sql',
-  'dydx_get_total_filled_from_liquidity.sql',
-  'dydx_get_weighted_average.sql',
-  'dydx_liquidation_fill_handler_per_order.sql',
-  'dydx_order_fill_handler_per_order.sql',
-  'dydx_perpetual_position_and_order_side_matching.sql',
-  'dydx_protocol_condition_type_to_order_type.sql',
-  'dydx_tendermint_event_to_transaction_index.sql',
-  'dydx_trim_scale.sql',
-  'dydx_update_perpetual_position_aggregate_fields.sql',
-  'dydx_uuid.sql',
-  'dydx_uuid_from_asset_position_parts.sql',
-  'dydx_uuid_from_fill_event_parts.sql',
-  'dydx_uuid_from_funding_index_update_parts.sql',
-  'dydx_uuid_from_oracle_price_parts.sql',
-  'dydx_uuid_from_order_id.sql',
-  'dydx_uuid_from_order_id_parts.sql',
-  'dydx_uuid_from_perpetual_position_parts.sql',
-  'dydx_uuid_from_subaccount_id.sql',
-  'dydx_uuid_from_subaccount_id_parts.sql',
-  'dydx_uuid_from_transaction_parts.sql',
-  'dydx_uuid_from_transfer_parts.sql',
+  'furya_clob_pair_status_to_market_status.sql',
+  'furya_create_initial_rows_for_tendermint_block.sql',
+  'furya_create_tendermint_event.sql',
+  'furya_create_transaction.sql',
+  'furya_event_id_from_parts.sql',
+  'furya_from_jsonlib_long.sql',
+  'furya_from_protocol_order_side.sql',
+  'furya_from_protocol_time_in_force.sql',
+  'furya_from_serializable_int.sql',
+  'furya_get_fee_from_liquidity.sql',
+  'furya_get_order_status.sql',
+  'furya_get_perpetual_market_for_clob_pair.sql',
+  'furya_get_total_filled_from_liquidity.sql',
+  'furya_get_weighted_average.sql',
+  'furya_liquidation_fill_handler_per_order.sql',
+  'furya_order_fill_handler_per_order.sql',
+  'furya_perpetual_position_and_order_side_matching.sql',
+  'furya_protocol_condition_type_to_order_type.sql',
+  'furya_tendermint_event_to_transaction_index.sql',
+  'furya_trim_scale.sql',
+  'furya_update_perpetual_position_aggregate_fields.sql',
+  'furya_uuid.sql',
+  'furya_uuid_from_asset_position_parts.sql',
+  'furya_uuid_from_fill_event_parts.sql',
+  'furya_uuid_from_funding_index_update_parts.sql',
+  'furya_uuid_from_oracle_price_parts.sql',
+  'furya_uuid_from_order_id.sql',
+  'furya_uuid_from_order_id_parts.sql',
+  'furya_uuid_from_perpetual_position_parts.sql',
+  'furya_uuid_from_subaccount_id.sql',
+  'furya_uuid_from_subaccount_id_parts.sql',
+  'furya_uuid_from_transaction_parts.sql',
+  'furya_uuid_from_transfer_parts.sql',
 ];
 
 const MAIN_SCRIPTS: string[] = [
-  'dydx_block_processor.sql',
+  'furya_block_processor.sql',
 ];
 
 const SCRIPTS: string[] = [

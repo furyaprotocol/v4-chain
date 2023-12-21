@@ -1,6 +1,6 @@
-import { stats } from '@dydxprotocol-indexer/base';
-import { PerpetualMarketFromDatabase, perpetualMarketRefresher } from '@dydxprotocol-indexer/postgres';
-import { OrderbookLevels, OrderbookLevelsCache } from '@dydxprotocol-indexer/redis';
+import { stats } from '@furyaprotocol-indexer/base';
+import { PerpetualMarketFromDatabase, perpetualMarketRefresher } from '@furyaprotocol-indexer/postgres';
+import { OrderbookLevels, OrderbookLevelsCache } from '@furyaprotocol-indexer/redis';
 import express from 'express';
 import { checkSchema, matchedData } from 'express-validator';
 import {

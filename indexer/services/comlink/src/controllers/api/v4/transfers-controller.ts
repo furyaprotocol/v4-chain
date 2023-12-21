@@ -1,4 +1,4 @@
-import { stats } from '@dydxprotocol-indexer/base';
+import { stats } from '@furyaprotocol-indexer/base';
 import {
   AssetColumns,
   AssetFromDatabase,
@@ -13,7 +13,7 @@ import {
   TransferColumns,
   TransferFromDatabase,
   TransferTable,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import express from 'express';
 import { matchedData } from 'express-validator';
 import _ from 'lodash';

@@ -3,7 +3,7 @@ package bitfinex_test
 import (
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/price_function/bitfinex"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/price_function/bitfinex"
 	"github.com/stretchr/testify/require"
 )
 

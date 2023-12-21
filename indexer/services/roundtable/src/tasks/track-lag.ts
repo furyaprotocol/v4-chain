@@ -1,5 +1,5 @@
-import { axiosRequest, logger, stats } from '@dydxprotocol-indexer/base';
-import { BlockFromDatabase, BlockTable, IsoString } from '@dydxprotocol-indexer/postgres';
+import { axiosRequest, logger, stats } from '@furyaprotocol-indexer/base';
+import { BlockFromDatabase, BlockTable, IsoString } from '@furyaprotocol-indexer/postgres';
 import Big from 'big.js';
 import { DateTime } from 'luxon';
 

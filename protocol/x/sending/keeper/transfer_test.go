@@ -3,25 +3,25 @@ package keeper_test
 import (
 	"errors"
 	"fmt"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
 	"math/big"
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/common"
-	indexerevents "github.com/dydxprotocol/v4-chain/protocol/indexer/events"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
-	"github.com/dydxprotocol/v4-chain/protocol/x/sending/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/common"
+	indexerevents "github.com/furyanprotocol/v4-chain/protocol/indexer/events"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
+	"github.com/furyanprotocol/v4-chain/protocol/x/sending/keeper"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	keepertest "github.com/dydxprotocol/v4-chain/protocol/testutil/keeper"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/sample"
-	assettypes "github.com/dydxprotocol/v4-chain/protocol/x/assets/types"
-	perptypes "github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/types"
-	"github.com/dydxprotocol/v4-chain/protocol/x/sending/types"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	keepertest "github.com/furyanprotocol/v4-chain/protocol/testutil/keeper"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/sample"
+	assettypes "github.com/furyanprotocol/v4-chain/protocol/x/assets/types"
+	perptypes "github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/types"
+	"github.com/furyanprotocol/v4-chain/protocol/x/sending/types"
 
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )
@@ -626,7 +626,7 @@ func TestSendFromModuleToAccount_InvalidRecipient(t *testing.T) {
 		&types.MsgSendFromModuleToAccount{
 			Authority:        lib.GovModuleAddress.String(),
 			SenderModuleName: "bridge",
-			Recipient:        "dydx1abc", // invalid recipient address
+			Recipient:        "furya1abc", // invalid recipient address
 			Coin:             sdk.NewCoin("dv4tnt", sdk.NewInt(1)),
 		},
 	)

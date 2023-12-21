@@ -1,8 +1,8 @@
-import { logger, startBugsnag, wrapBackgroundTask } from '@dydxprotocol-indexer/base';
-import { stopConsumer, startConsumer } from '@dydxprotocol-indexer/kafka';
+import { logger, startBugsnag, wrapBackgroundTask } from '@furyaprotocol-indexer/base';
+import { stopConsumer, startConsumer } from '@furyaprotocol-indexer/kafka';
 import {
   assetRefresher, perpetualMarketRefresher, liquidityTierRefresher,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 
 import { initializeAllCaches } from './caches/block-cache';
 import config from './config';

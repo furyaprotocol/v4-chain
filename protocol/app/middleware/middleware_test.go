@@ -6,7 +6,7 @@ import (
 	"github.com/cometbft/cometbft/libs/log"
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/app/middleware"
+	"github.com/furyanprotocol/v4-chain/protocol/app/middleware"
 	"github.com/stretchr/testify/require"
 )
 

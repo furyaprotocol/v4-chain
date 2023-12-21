@@ -4,8 +4,8 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/app/msgs"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/app/msgs"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
 	"github.com/stretchr/testify/require"
 )
 
@@ -108,22 +108,22 @@ func TestNormalMsgs_Key(t *testing.T) {
 		"/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal",
 
 		// clob
-		"/dydxprotocol.clob.MsgCancelOrder",
-		"/dydxprotocol.clob.MsgCancelOrderResponse",
-		"/dydxprotocol.clob.MsgPlaceOrder",
-		"/dydxprotocol.clob.MsgPlaceOrderResponse",
+		"/furyaprotocol.clob.MsgCancelOrder",
+		"/furyaprotocol.clob.MsgCancelOrderResponse",
+		"/furyaprotocol.clob.MsgPlaceOrder",
+		"/furyaprotocol.clob.MsgPlaceOrderResponse",
 
 		// perpetuals
 
 		// prices
 
 		// sending
-		"/dydxprotocol.sending.MsgCreateTransfer",
-		"/dydxprotocol.sending.MsgCreateTransferResponse",
-		"/dydxprotocol.sending.MsgDepositToSubaccount",
-		"/dydxprotocol.sending.MsgDepositToSubaccountResponse",
-		"/dydxprotocol.sending.MsgWithdrawFromSubaccount",
-		"/dydxprotocol.sending.MsgWithdrawFromSubaccountResponse",
+		"/furyaprotocol.sending.MsgCreateTransfer",
+		"/furyaprotocol.sending.MsgCreateTransferResponse",
+		"/furyaprotocol.sending.MsgDepositToSubaccount",
+		"/furyaprotocol.sending.MsgDepositToSubaccountResponse",
+		"/furyaprotocol.sending.MsgWithdrawFromSubaccount",
+		"/furyaprotocol.sending.MsgWithdrawFromSubaccountResponse",
 
 		// ibc.applications
 		"/ibc.applications.transfer.v1.MsgTransfer",

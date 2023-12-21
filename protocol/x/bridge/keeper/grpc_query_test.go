@@ -8,13 +8,13 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	testapp "github.com/dydxprotocol/v4-chain/protocol/testutil/app"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	pricestest "github.com/dydxprotocol/v4-chain/protocol/testutil/prices"
-	"github.com/dydxprotocol/v4-chain/protocol/x/bridge/types"
-	delaymsgtypes "github.com/dydxprotocol/v4-chain/protocol/x/delaymsg/types"
-	pricestypes "github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
-	sendingtypes "github.com/dydxprotocol/v4-chain/protocol/x/sending/types"
+	testapp "github.com/furyanprotocol/v4-chain/protocol/testutil/app"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	pricestest "github.com/furyanprotocol/v4-chain/protocol/testutil/prices"
+	"github.com/furyanprotocol/v4-chain/protocol/x/bridge/types"
+	delaymsgtypes "github.com/furyanprotocol/v4-chain/protocol/x/delaymsg/types"
+	pricestypes "github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
+	sendingtypes "github.com/furyanprotocol/v4-chain/protocol/x/sending/types"
 )
 
 var (

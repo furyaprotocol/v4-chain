@@ -2,7 +2,7 @@ package config_test
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/dydxprotocol/v4-chain/protocol/app/config"
+	"github.com/furyanprotocol/v4-chain/protocol/app/config"
 	"github.com/stretchr/testify/require"
 	"testing"
 )
@@ -23,12 +23,12 @@ func TestSetupConfig_SealsConfig(t *testing.T) {
 func TestSetAddressPrefixes(t *testing.T) {
 	sdkConfig := sdk.GetConfig()
 
-	require.Equal(t, "dydx", sdkConfig.GetBech32AccountAddrPrefix())
-	require.Equal(t, "dydxpub", sdkConfig.GetBech32AccountPubPrefix())
+	require.Equal(t, "furya", sdkConfig.GetBech32AccountAddrPrefix())
+	require.Equal(t, "furyapub", sdkConfig.GetBech32AccountPubPrefix())
 
-	require.Equal(t, "dydxvaloper", sdkConfig.GetBech32ValidatorAddrPrefix())
-	require.Equal(t, "dydxvaloperpub", sdkConfig.GetBech32ValidatorPubPrefix())
+	require.Equal(t, "furyavaloper", sdkConfig.GetBech32ValidatorAddrPrefix())
+	require.Equal(t, "furyavaloperpub", sdkConfig.GetBech32ValidatorPubPrefix())
 
-	require.Equal(t, "dydxvalcons", sdkConfig.GetBech32ConsensusAddrPrefix())
-	require.Equal(t, "dydxvalconspub", sdkConfig.GetBech32ConsensusPubPrefix())
+	require.Equal(t, "furyavalcons", sdkConfig.GetBech32ConsensusAddrPrefix())
+	require.Equal(t, "furyavalconspub", sdkConfig.GetBech32ConsensusPubPrefix())
 }

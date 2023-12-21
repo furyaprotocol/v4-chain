@@ -1,10 +1,10 @@
-import { logger, ParseMessageError } from '@dydxprotocol-indexer/base';
+import { logger, ParseMessageError } from '@furyaprotocol-indexer/base';
 import {
   IndexerTendermintBlock,
   IndexerTendermintEvent,
   TransferEventV1,
-} from '@dydxprotocol-indexer/v4-protos';
-import { DydxIndexerSubtypes } from '../../src/lib/types';
+} from '@furyaprotocol-indexer/v4-protos';
+import { FuryaIndexerSubtypes } from '../../src/lib/types';
 import { TransferValidator } from '../../src/validators/transfer-validator';
 import {
   defaultHeight,
@@ -111,7 +111,7 @@ function createBlock(
   transferEvent: TransferEventV1,
 ): IndexerTendermintBlock {
   const event: IndexerTendermintEvent = createIndexerTendermintEvent(
-    DydxIndexerSubtypes.TRANSFER,
+    FuryaIndexerSubtypes.TRANSFER,
     TransferEventV1.encode(transferEvent).finish(),
     0,
     0,

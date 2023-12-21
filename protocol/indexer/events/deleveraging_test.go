@@ -1,12 +1,12 @@
 package events_test
 
 import (
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 	"testing"
 
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/events"
-	v1 "github.com/dydxprotocol/v4-chain/protocol/indexer/protocol/v1"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/events"
+	v1 "github.com/furyanprotocol/v4-chain/protocol/indexer/protocol/v1"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
 	"github.com/stretchr/testify/require"
 )
 

@@ -1,4 +1,4 @@
-FROM dydxprotocol-base
+FROM furyaprotocol-base
 
 RUN apk add --no-cache bash dasel jq
 

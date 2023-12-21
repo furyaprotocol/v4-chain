@@ -10,11 +10,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	pricefeedtypes "github.com/dydxprotocol/v4-chain/protocol/daemons/server/types/pricefeed"
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/indexer_manager"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	libtime "github.com/dydxprotocol/v4-chain/protocol/lib/time"
-	"github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
+	pricefeedtypes "github.com/furyanprotocol/v4-chain/protocol/daemons/server/types/pricefeed"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/indexer_manager"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	libtime "github.com/furyanprotocol/v4-chain/protocol/lib/time"
+	"github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
 )
 
 type (

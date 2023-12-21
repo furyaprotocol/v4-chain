@@ -18,20 +18,20 @@ import (
 	upgrade "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 	"github.com/cosmos/gogoproto/jsonpb"
 	"github.com/cosmos/gogoproto/proto"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/pricefeed/client/types"
-	testapp "github.com/dydxprotocol/v4-chain/protocol/testutil/app"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/daemons/pricefeed/exchange_config"
-	assets "github.com/dydxprotocol/v4-chain/protocol/x/assets/types"
-	clob "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	prices "github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/pricefeed/client/types"
+	testapp "github.com/furyanprotocol/v4-chain/protocol/testutil/app"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/daemons/pricefeed/exchange_config"
+	assets "github.com/furyanprotocol/v4-chain/protocol/x/assets/types"
+	clob "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	prices "github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
 const expectDirName = "expect"
-const govModuleAddress = "dydx10d07y265gmmuvt4z0w9aw880jnsr700jnmapky"
+const govModuleAddress = "furya10d07y265gmmuvt4z0w9aw880jnsr700jnmapky"
 
 var acceptFlag = flag.Bool("accept", false, "Accept new values for expect files")
 var nodeAddresses = []string{

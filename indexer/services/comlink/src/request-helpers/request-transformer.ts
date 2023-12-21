@@ -23,9 +23,9 @@ import {
   SubaccountTable,
   TimeInForce,
   TransferFromDatabase,
-} from '@dydxprotocol-indexer/postgres';
-import { OrderbookLevels, PriceLevel } from '@dydxprotocol-indexer/redis';
-import { RedisOrder } from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/postgres';
+import { OrderbookLevels, PriceLevel } from '@furyaprotocol-indexer/redis';
+import { RedisOrder } from '@furyaprotocol-indexer/v4-protos';
 import Big from 'big.js';
 import _ from 'lodash';
 

@@ -1,6 +1,6 @@
-import { TRADES_WEBSOCKET_MESSAGE_VERSION, KafkaTopics } from '@dydxprotocol-indexer/kafka';
-import { testConstants, TradeContent, TradeMessageContents } from '@dydxprotocol-indexer/postgres';
-import { TradeMessage } from '@dydxprotocol-indexer/v4-protos';
+import { TRADES_WEBSOCKET_MESSAGE_VERSION, KafkaTopics } from '@furyaprotocol-indexer/kafka';
+import { testConstants, TradeContent, TradeMessageContents } from '@furyaprotocol-indexer/postgres';
+import { TradeMessage } from '@furyaprotocol-indexer/v4-protos';
 
 import { AnnotatedSubaccountMessage, ConsolidatedKafkaEvent, SingleTradeMessage } from '../../src/lib/types';
 

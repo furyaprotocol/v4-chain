@@ -10,10 +10,10 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/sim_helpers"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	perptypes "github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/types"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/sim_helpers"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	perptypes "github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/types"
 )
 
 // genNumClobPairs returns a randomized number of CLOB pairs.

@@ -15,16 +15,16 @@ import {
   ONE_HOUR_IN_MILLISECONDS,
   ONE_SECOND_IN_MILLISECONDS,
   TEN_SECONDS_IN_MILLISECONDS,
-} from '@dydxprotocol-indexer/base';
+} from '@furyaprotocol-indexer/base';
 import {
   kafkaConfigSchema,
-} from '@dydxprotocol-indexer/kafka';
+} from '@furyaprotocol-indexer/kafka';
 import {
   postgresConfigSchema,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import {
   redisConfigSchema,
-} from '@dydxprotocol-indexer/redis';
+} from '@furyaprotocol-indexer/redis';
 
 export const configSchema = {
   ...baseConfigSchema,

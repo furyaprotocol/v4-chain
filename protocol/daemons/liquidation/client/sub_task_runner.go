@@ -7,17 +7,17 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 	"github.com/cosmos/cosmos-sdk/telemetry"
-	"github.com/dydxprotocol/v4-chain/protocol/daemons/flags"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
-	assetstypes "github.com/dydxprotocol/v4-chain/protocol/x/assets/types"
-	clobkeeper "github.com/dydxprotocol/v4-chain/protocol/x/clob/keeper"
-	clobtypes "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	perpkeeper "github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/keeper"
-	perptypes "github.com/dydxprotocol/v4-chain/protocol/x/perpetuals/types"
-	pricestypes "github.com/dydxprotocol/v4-chain/protocol/x/prices/types"
-	sakeeper "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/keeper"
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	"github.com/furyanprotocol/v4-chain/protocol/daemons/flags"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
+	assetstypes "github.com/furyanprotocol/v4-chain/protocol/x/assets/types"
+	clobkeeper "github.com/furyanprotocol/v4-chain/protocol/x/clob/keeper"
+	clobtypes "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	perpkeeper "github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/keeper"
+	perptypes "github.com/furyanprotocol/v4-chain/protocol/x/perpetuals/types"
+	pricestypes "github.com/furyanprotocol/v4-chain/protocol/x/prices/types"
+	sakeeper "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/keeper"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 )
 
 // SubTaskRunner provides an interface that encapsulates the liquidations daemon logic to gather and report

@@ -1,4 +1,4 @@
-import { stats } from '@dydxprotocol-indexer/base';
+import { stats } from '@furyaprotocol-indexer/base';
 import {
   DEFAULT_POSTGRES_OPTIONS,
   IsoString,
@@ -8,7 +8,7 @@ import {
   QueryableField,
   SubaccountFromDatabase,
   SubaccountTable,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import express from 'express';
 import { matchedData } from 'express-validator';
 import {

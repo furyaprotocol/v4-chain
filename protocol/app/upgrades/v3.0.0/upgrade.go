@@ -8,11 +8,11 @@ import (
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
-	bridgemoduletypes "github.com/dydxprotocol/v4-chain/protocol/x/bridge/types"
-	clobmoduletypes "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	rewardsmoduletypes "github.com/dydxprotocol/v4-chain/protocol/x/rewards/types"
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
-	vestmoduletypes "github.com/dydxprotocol/v4-chain/protocol/x/vest/types"
+	bridgemoduletypes "github.com/furyanprotocol/v4-chain/protocol/x/bridge/types"
+	clobmoduletypes "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	rewardsmoduletypes "github.com/furyanprotocol/v4-chain/protocol/x/rewards/types"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
+	vestmoduletypes "github.com/furyanprotocol/v4-chain/protocol/x/vest/types"
 )
 
 var (
@@ -82,7 +82,7 @@ func InitializeModuleAccs(ctx sdk.Context, ak authkeeper.AccountKeeper) {
 
 		// Account has not been initialized at all. Initialize it as module.
 		// Implementation taken from
-		// https://github.com/dydxprotocol/cosmos-sdk/blob/bdf96fdd/x/auth/keeper/keeper.go#L213
+		// https://github.com/furyaprotocol/cosmos-sdk/blob/bdf96fdd/x/auth/keeper/keeper.go#L213
 		newModuleAccount := authtypes.NewEmptyModuleAccount(modAccName, perms...)
 		maccI := (ak.NewAccount(ctx, newModuleAccount)).(authtypes.ModuleAccountI) // this set the account number
 		ak.SetModuleAccount(ctx, maccI)

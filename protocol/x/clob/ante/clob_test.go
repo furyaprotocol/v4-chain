@@ -11,13 +11,13 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
-	"github.com/dydxprotocol/v4-chain/protocol/mocks"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/constants"
-	sdktest "github.com/dydxprotocol/v4-chain/protocol/testutil/sdk"
-	txtest "github.com/dydxprotocol/v4-chain/protocol/testutil/sdk/tx"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/ante"
-	clobtypes "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	satypes "github.com/dydxprotocol/v4-chain/protocol/x/subaccounts/types"
+	"github.com/furyanprotocol/v4-chain/protocol/mocks"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/constants"
+	sdktest "github.com/furyanprotocol/v4-chain/protocol/testutil/sdk"
+	txtest "github.com/furyanprotocol/v4-chain/protocol/testutil/sdk/tx"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/ante"
+	clobtypes "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	satypes "github.com/furyanprotocol/v4-chain/protocol/x/subaccounts/types"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )
@@ -59,7 +59,7 @@ func runTestCase(t *testing.T, tc TestCase) {
 	// Create Test Transaction.
 	priv1, _, _ := testdata.KeyTestPubAddr()
 	privs, accNums, accSeqs := []cryptotypes.PrivKey{priv1}, []uint64{0}, []uint64{0}
-	tx, err := txtest.CreateTestTx(privs, accNums, accSeqs, "dydx", tc.msgs)
+	tx, err := txtest.CreateTestTx(privs, accNums, accSeqs, "furya", tc.msgs)
 	require.NoError(t, err)
 
 	// Call Antehandler.

@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/dydxprotocol/v4-chain/protocol/indexer/indexer_manager"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/metrics"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/rate_limit"
+	"github.com/furyanprotocol/v4-chain/protocol/indexer/indexer_manager"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/metrics"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/rate_limit"
 
 	"github.com/cometbft/cometbft/libs/log"
 
@@ -17,8 +17,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	flags "github.com/dydxprotocol/v4-chain/protocol/x/clob/flags"
-	"github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
+	flags "github.com/furyanprotocol/v4-chain/protocol/x/clob/flags"
+	"github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
 )
 
 type (

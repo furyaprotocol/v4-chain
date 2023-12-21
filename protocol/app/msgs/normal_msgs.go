@@ -17,8 +17,8 @@ import (
 	ibcconn "github.com/cosmos/ibc-go/v7/modules/core/03-connection/types"
 	ibccore "github.com/cosmos/ibc-go/v7/modules/core/04-channel/types"
 
-	clob "github.com/dydxprotocol/v4-chain/protocol/x/clob/types"
-	sending "github.com/dydxprotocol/v4-chain/protocol/x/sending/types"
+	clob "github.com/furyanprotocol/v4-chain/protocol/x/clob/types"
+	sending "github.com/furyanprotocol/v4-chain/protocol/x/sending/types"
 )
 
 var (
@@ -121,22 +121,22 @@ var (
 		"/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal":       nil,
 
 		// clob
-		"/dydxprotocol.clob.MsgCancelOrder":         &clob.MsgCancelOrder{},
-		"/dydxprotocol.clob.MsgCancelOrderResponse": nil,
-		"/dydxprotocol.clob.MsgPlaceOrder":          &clob.MsgPlaceOrder{},
-		"/dydxprotocol.clob.MsgPlaceOrderResponse":  nil,
+		"/furyaprotocol.clob.MsgCancelOrder":         &clob.MsgCancelOrder{},
+		"/furyaprotocol.clob.MsgCancelOrderResponse": nil,
+		"/furyaprotocol.clob.MsgPlaceOrder":          &clob.MsgPlaceOrder{},
+		"/furyaprotocol.clob.MsgPlaceOrderResponse":  nil,
 
 		// perpetuals
 
 		// prices
 
 		// sending
-		"/dydxprotocol.sending.MsgCreateTransfer":                 &sending.MsgCreateTransfer{},
-		"/dydxprotocol.sending.MsgCreateTransferResponse":         nil,
-		"/dydxprotocol.sending.MsgDepositToSubaccount":            &sending.MsgDepositToSubaccount{},
-		"/dydxprotocol.sending.MsgDepositToSubaccountResponse":    nil,
-		"/dydxprotocol.sending.MsgWithdrawFromSubaccount":         &sending.MsgWithdrawFromSubaccount{},
-		"/dydxprotocol.sending.MsgWithdrawFromSubaccountResponse": nil,
+		"/furyaprotocol.sending.MsgCreateTransfer":                 &sending.MsgCreateTransfer{},
+		"/furyaprotocol.sending.MsgCreateTransferResponse":         nil,
+		"/furyaprotocol.sending.MsgDepositToSubaccount":            &sending.MsgDepositToSubaccount{},
+		"/furyaprotocol.sending.MsgDepositToSubaccountResponse":    nil,
+		"/furyaprotocol.sending.MsgWithdrawFromSubaccount":         &sending.MsgWithdrawFromSubaccount{},
+		"/furyaprotocol.sending.MsgWithdrawFromSubaccountResponse": nil,
 
 		// ibc.applications
 		"/ibc.applications.transfer.v1.MsgTransfer":           &ibctransfer.MsgTransfer{},

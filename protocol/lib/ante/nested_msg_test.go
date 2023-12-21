@@ -8,10 +8,10 @@ import (
 	bank "github.com/cosmos/cosmos-sdk/x/bank/types"
 	gov "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 
-	appmsgs "github.com/dydxprotocol/v4-chain/protocol/app/msgs"
-	"github.com/dydxprotocol/v4-chain/protocol/lib"
-	"github.com/dydxprotocol/v4-chain/protocol/lib/ante"
-	testmsgs "github.com/dydxprotocol/v4-chain/protocol/testutil/msgs"
+	appmsgs "github.com/furyanprotocol/v4-chain/protocol/app/msgs"
+	"github.com/furyanprotocol/v4-chain/protocol/lib"
+	"github.com/furyanprotocol/v4-chain/protocol/lib/ante"
+	testmsgs "github.com/furyanprotocol/v4-chain/protocol/testutil/msgs"
 
 	"github.com/stretchr/testify/require"
 )

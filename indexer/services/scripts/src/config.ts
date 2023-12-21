@@ -1,6 +1,6 @@
-import { baseConfigSchema, parseSchema } from '@dydxprotocol-indexer/base';
-import { kafkaConfigSchema } from '@dydxprotocol-indexer/kafka';
-import { postgresConfigSchema } from '@dydxprotocol-indexer/postgres';
+import { baseConfigSchema, parseSchema } from '@furyaprotocol-indexer/base';
+import { kafkaConfigSchema } from '@furyaprotocol-indexer/kafka';
+import { postgresConfigSchema } from '@furyaprotocol-indexer/postgres';
 
 export const configSchema = {
   ...baseConfigSchema,

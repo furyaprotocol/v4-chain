@@ -2,8 +2,8 @@ import {
   logger,
   runFuncWithTimingStat,
   stats,
-} from '@dydxprotocol-indexer/base';
-import { KafkaTopics, SUBACCOUNTS_WEBSOCKET_MESSAGE_VERSION } from '@dydxprotocol-indexer/kafka';
+} from '@furyaprotocol-indexer/base';
+import { KafkaTopics, SUBACCOUNTS_WEBSOCKET_MESSAGE_VERSION } from '@furyaprotocol-indexer/kafka';
 import {
   APIOrderStatus,
   APIOrderStatusEnum,
@@ -17,7 +17,7 @@ import {
   protocolTranslations,
   OrderFromDatabase,
   IsoString,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 import {
   OpenOrdersCache,
   OrderbookLevelsCache,
@@ -25,8 +25,8 @@ import {
   placeOrder,
   CanceledOrdersCache,
   StatefulOrderUpdatesCache,
-} from '@dydxprotocol-indexer/redis';
-import { ORDER_FLAG_SHORT_TERM, getOrderIdHash, isStatefulOrder } from '@dydxprotocol-indexer/v4-proto-parser';
+} from '@furyaprotocol-indexer/redis';
+import { ORDER_FLAG_SHORT_TERM, getOrderIdHash, isStatefulOrder } from '@furyaprotocol-indexer/v4-proto-parser';
 import {
   OffChainUpdateV1,
   IndexerOrder,
@@ -35,7 +35,7 @@ import {
   OrderUpdateV1,
   RedisOrder,
   SubaccountMessage,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import Big from 'big.js';
 import { Message } from 'kafkajs';
 

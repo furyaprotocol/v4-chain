@@ -27,14 +27,14 @@ import {
   OrderbookMessage,
   SubaccountMessage,
   TradeMessage,
-} from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/v4-protos';
 import { V4_MARKETS_ID } from '../../src/lib/constants';
 import {
   dbHelpers,
   testMocks,
   perpetualMarketRefresher,
   CandleResolution,
-} from '@dydxprotocol-indexer/postgres';
+} from '@furyaprotocol-indexer/postgres';
 
 describe('from-kafka-helpers', () => {
   describe('getChannel', () => {

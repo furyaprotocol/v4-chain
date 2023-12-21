@@ -4,8 +4,8 @@ import {
   PerpetualMarketFromDatabase,
   liquidityTierRefresher,
   perpetualMarketRefresher,
-} from '@dydxprotocol-indexer/postgres';
-import { LiquidityTierUpsertEventV1 } from '@dydxprotocol-indexer/v4-protos';
+} from '@furyaprotocol-indexer/postgres';
+import { LiquidityTierUpsertEventV1 } from '@furyaprotocol-indexer/v4-protos';
 import _ from 'lodash';
 import * as pg from 'pg';
 

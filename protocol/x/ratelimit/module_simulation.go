@@ -8,9 +8,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/dydxprotocol/v4-chain/protocol/testutil/sample"
-	ratelimitsimulation "github.com/dydxprotocol/v4-chain/protocol/x/ratelimit/simulation"
-	"github.com/dydxprotocol/v4-chain/protocol/x/ratelimit/types"
+	"github.com/furyanprotocol/v4-chain/protocol/testutil/sample"
+	ratelimitsimulation "github.com/furyanprotocol/v4-chain/protocol/x/ratelimit/simulation"
+	"github.com/furyanprotocol/v4-chain/protocol/x/ratelimit/types"
 )
 
 // avoid unused import issue
